@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoZapateria
 {
-    public partial class Ventas : Form
+    public partial class Inventario : Form
     {
-        public Ventas()
+        public Inventario()
         {
             InitializeComponent();
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
