@@ -48,5 +48,24 @@ namespace ProyectoZapateria
             // Mostrar el mensaje de bienvenida en el control Label
             lblBienvenido.Text = mensajeBienvenida;
         }
+
+        private void btnGenerarVenta_Click(object sender, EventArgs e)
+        {
+            Ventas Ventas1 = new Ventas();
+            Ventas1.Show();
+            this.Hide();
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            Inventario inventario = new Inventario();
+            inventario.Show();
+            this.Hide();
+        }
+
+        private void btnRegisProveedor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

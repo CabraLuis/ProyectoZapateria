@@ -43,6 +43,7 @@
             btnGenerarVenta.TabIndex = 0;
             btnGenerarVenta.Text = "Generar Venta";
             btnGenerarVenta.UseVisualStyleBackColor = true;
+            btnGenerarVenta.Click += btnGenerarVenta_Click;
             // 
             // btnInventario
             // 
@@ -52,6 +53,7 @@
             btnInventario.TabIndex = 1;
             btnInventario.Text = "Inventario";
             btnInventario.UseVisualStyleBackColor = true;
+            btnInventario.Click += btnInventario_Click;
             // 
             // btnRegisProveedor
             // 
@@ -61,6 +63,7 @@
             btnRegisProveedor.TabIndex = 2;
             btnRegisProveedor.Text = "Registrar Proveedor";
             btnRegisProveedor.UseVisualStyleBackColor = true;
+            btnRegisProveedor.Click += btnRegisProveedor_Click;
             // 
             // btnSalir
             // 
