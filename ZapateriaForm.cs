@@ -43,25 +43,39 @@ namespace ProyectoZapateria
                 {
                     connection.Open();
                     string query = "SELECT TipoUser FROM Usuarios WHERE Nom_User = @NombreUsuario AND Contra = @Contraseña";
+                    string query2 = "SELECT Sexo FROM Usuarios where Nom_User =@NombreUsuario";
                     SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command2 = new SqlCommand(query2, connection);
                     command.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
                     command.Parameters.AddWithValue("@Contraseña", contraseña);
+                    command2.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+                    command2.Parameters.AddWithValue("@Contraseña", contraseña);
+
+
 
                     object tipoUsuario = command.ExecuteScalar();
-
+                    object sexo = command2.ExecuteScalar();
                     if (tipoUsuario != null)
                     {
                         // El usuario ha iniciado sesión correctamente
-                        string tipoUsuarioString = tipoUsuario.ToString();                   
+                        string tipoUsuarioString = tipoUsuario.ToString();
+                        GenerarVenta GenerarVenta = new GenerarVenta(sexo);
                         switch (tipoUsuarioString)
                         {
+
                             case "Administrador":
                                 // Lógica para el usuario administrador
                                 MessageBox.Show("Si entras perrio");
+                               
+                                GenerarVenta.Show();
                                 Limpiar();
                                 break;
                             case "Empleado":
                                 // Lógica para el usuario normal
+                                                         
+                                GenerarVenta.Show();
+                                this.Hide();
+                               
                                 break;                           
                         }
                     }
