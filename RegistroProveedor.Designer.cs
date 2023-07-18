@@ -168,6 +168,7 @@
             radEliminarProveedor.TabStop = true;
             radEliminarProveedor.Text = "Eliminar Proveedor";
             radEliminarProveedor.UseVisualStyleBackColor = false;
+            radEliminarProveedor.CheckedChanged += radEliminarProveedor_CheckedChanged;
             // 
             // radActualizarProveedor
             // 
@@ -180,6 +181,7 @@
             radActualizarProveedor.TabIndex = 1;
             radActualizarProveedor.Text = "ModificarProveedor";
             radActualizarProveedor.UseVisualStyleBackColor = false;
+            radActualizarProveedor.CheckedChanged += radActualizarProveedor_CheckedChanged;
             // 
             // radAgregarProveedor
             // 
@@ -194,6 +196,7 @@
             radAgregarProveedor.TabStop = true;
             radAgregarProveedor.Text = "Agregar Proveedor";
             radAgregarProveedor.UseVisualStyleBackColor = false;
+            radAgregarProveedor.CheckedChanged += radAgregarProveedor_CheckedChanged;
             // 
             // dtgDatosProveedores
             // 
@@ -251,6 +254,7 @@
             Controls.Add(grpDatosProveedor);
             Name = "RegistroProveedor";
             Text = "RegistroProveedor";
+            Load += RegistroProveedor_Load;
             grpDatosProveedor.ResumeLayout(false);
             grpDatosProveedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatosProveedores).EndInit();

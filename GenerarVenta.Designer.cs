@@ -70,6 +70,7 @@
             btnRegisProveedor.TabIndex = 2;
             btnRegisProveedor.Text = "Registrar Proveedor";
             btnRegisProveedor.UseVisualStyleBackColor = false;
+            btnRegisProveedor.Click += btnRegisProveedor_Click_1;
             // 
             // btnSalir
             // 
@@ -81,6 +82,7 @@
             btnSalir.TabIndex = 3;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // lblBienvenido
             // 

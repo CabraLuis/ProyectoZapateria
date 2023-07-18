@@ -20,6 +20,7 @@ namespace ProyectoZapateria
             InitializeComponent();
             ay = a.ToString();
         }
+        public GenerarVenta() { InitializeComponent(); }
 
         private void GenerarVenta_Load(object sender, EventArgs e)
         {
@@ -70,7 +71,21 @@ namespace ProyectoZapateria
 
         private void btnGenerarVenta_Click_1(object sender, EventArgs e)
         {
+            Ventas ControlVentas = new Ventas();
+            ControlVentas.Show();
+            this.Hide();
+        }
 
+        private void btnRegisProveedor_Click_1(object sender, EventArgs e)
+        {
+            RegistroProveedor proveedor = new RegistroProveedor();
+            proveedor.Show();
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
