@@ -16,5 +16,15 @@ namespace ProyectoZapateria
         {
             InitializeComponent();
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,5 +31,10 @@ namespace ProyectoZapateria
         {
 
         }
+
+        private void btnRealizarVenta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
