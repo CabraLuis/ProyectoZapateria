@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d4YsMH+nhe9UStmgI4sIfnFiWpAT0f9slFyZRUNgEzVA9pGzK48dXwtmmHoRXmhcd6OmiVRcYa1jv0j2LmtAPw==",
+  "dgSpecHash": "MmI8RV4BsyQ8EamvvBH2MYGZnuGuMf8ddsJl9agbAioYjyeNqOHFWdbFD7oe3jHWpoB0Ll8hlck6jerQ9LP04A==",
   "success": true,
-  "projectFilePath": "D:\\ProyectoZapateria-master\\ProyectoZapateria.csproj",
+  "projectFilePath": "C:\\wamp64\\www\\Prueba\\ProyectoZapateria\\ProyectoZapateria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fer_m\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\fer_m\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

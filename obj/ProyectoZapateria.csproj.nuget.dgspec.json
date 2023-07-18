@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProyectoZapateria-master\\ProyectoZapateria.csproj": {}
+    "C:\\wamp64\\www\\Prueba\\ProyectoZapateria\\ProyectoZapateria.csproj": {}
   },
   "projects": {
-    "D:\\ProyectoZapateria-master\\ProyectoZapateria.csproj": {
+    "C:\\wamp64\\www\\Prueba\\ProyectoZapateria\\ProyectoZapateria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProyectoZapateria-master\\ProyectoZapateria.csproj",
+        "projectUniqueName": "C:\\wamp64\\www\\Prueba\\ProyectoZapateria\\ProyectoZapateria.csproj",
         "projectName": "ProyectoZapateria",
-        "projectPath": "D:\\ProyectoZapateria-master\\ProyectoZapateria.csproj",
+        "projectPath": "C:\\wamp64\\www\\Prueba\\ProyectoZapateria\\ProyectoZapateria.csproj",
         "packagesPath": "C:\\Users\\fer_m\\.nuget\\packages\\",
-        "outputPath": "D:\\ProyectoZapateria-master\\obj\\",
+        "outputPath": "C:\\wamp64\\www\\Prueba\\ProyectoZapateria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
