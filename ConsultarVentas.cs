@@ -16,12 +16,5 @@ namespace ProyectoZapateria
         {
             InitializeComponent();
         }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-           GenerarVenta generarVenta = new GenerarVenta();
-            generarVenta.Show();
-            this.Hide();
-        }
     }
 }

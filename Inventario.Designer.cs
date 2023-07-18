@@ -28,366 +28,366 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grpDatosZapato = new GroupBox();
-            btnRegresar = new Button();
-            btnAccion = new Button();
-            cmbProveedores = new ComboBox();
-            txtPrecio = new TextBox();
-            txtExistencias = new TextBox();
-            txtColor = new TextBox();
-            txtModelo = new TextBox();
-            txtMarca = new TextBox();
-            txtTalla = new TextBox();
-            txtID = new TextBox();
-            txtTipoCalzado = new TextBox();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label9 = new Label();
-            label1 = new Label();
-            radActualizar = new RadioButton();
-            radAgregar = new RadioButton();
-            dataGridView1 = new DataGridView();
-            dtgcID = new DataGridViewTextBoxColumn();
-            dtgcTipoCalzado = new DataGridViewTextBoxColumn();
-            dtgcTalla = new DataGridViewTextBoxColumn();
-            dtgcMarca = new DataGridViewTextBoxColumn();
-            dtgcModelo = new DataGridViewTextBoxColumn();
-            dtgcStock = new DataGridViewTextBoxColumn();
-            dtgcColor = new DataGridViewTextBoxColumn();
-            dtgcPrecio = new DataGridViewTextBoxColumn();
-            dtgcProveedor = new DataGridViewTextBoxColumn();
-            grpDatosZapato.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.grpDatosZapato = new System.Windows.Forms.GroupBox();
+            this.btnAccion = new System.Windows.Forms.Button();
+            this.cmbProveedores = new System.Windows.Forms.ComboBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtExistencias = new System.Windows.Forms.TextBox();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtTalla = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtTipoCalzado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.radActualizar = new System.Windows.Forms.RadioButton();
+            this.radAgregar = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgcID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcTipoCalzado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcTalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgcProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpDatosZapato.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // grpDatosZapato
             // 
-            grpDatosZapato.Controls.Add(btnRegresar);
-            grpDatosZapato.Controls.Add(btnAccion);
-            grpDatosZapato.Controls.Add(cmbProveedores);
-            grpDatosZapato.Controls.Add(txtPrecio);
-            grpDatosZapato.Controls.Add(txtExistencias);
-            grpDatosZapato.Controls.Add(txtColor);
-            grpDatosZapato.Controls.Add(txtModelo);
-            grpDatosZapato.Controls.Add(txtMarca);
-            grpDatosZapato.Controls.Add(txtTalla);
-            grpDatosZapato.Controls.Add(txtID);
-            grpDatosZapato.Controls.Add(txtTipoCalzado);
-            grpDatosZapato.Controls.Add(label8);
-            grpDatosZapato.Controls.Add(label7);
-            grpDatosZapato.Controls.Add(label6);
-            grpDatosZapato.Controls.Add(label5);
-            grpDatosZapato.Controls.Add(label4);
-            grpDatosZapato.Controls.Add(label3);
-            grpDatosZapato.Controls.Add(label2);
-            grpDatosZapato.Controls.Add(label9);
-            grpDatosZapato.Controls.Add(label1);
-            grpDatosZapato.Controls.Add(radActualizar);
-            grpDatosZapato.Controls.Add(radAgregar);
-            grpDatosZapato.Location = new Point(12, 12);
-            grpDatosZapato.Name = "grpDatosZapato";
-            grpDatosZapato.Size = new Size(353, 426);
-            grpDatosZapato.TabIndex = 0;
-            grpDatosZapato.TabStop = false;
-            grpDatosZapato.Text = "Datos del producto:";
-            // 
-            // btnRegresar
-            // 
-            btnRegresar.Location = new Point(230, 397);
-            btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(94, 29);
-            btnRegresar.TabIndex = 2;
-            btnRegresar.Text = "Regresar";
-            btnRegresar.UseVisualStyleBackColor = true;
-            btnRegresar.Click += btnRegresar_Click;
+            this.grpDatosZapato.BackColor = System.Drawing.Color.Black;
+            this.grpDatosZapato.BackgroundImage = global::ProyectoZapateria.Properties.Resources.FondoTenis4;
+            this.grpDatosZapato.Controls.Add(this.btnAccion);
+            this.grpDatosZapato.Controls.Add(this.cmbProveedores);
+            this.grpDatosZapato.Controls.Add(this.txtPrecio);
+            this.grpDatosZapato.Controls.Add(this.txtExistencias);
+            this.grpDatosZapato.Controls.Add(this.txtColor);
+            this.grpDatosZapato.Controls.Add(this.txtModelo);
+            this.grpDatosZapato.Controls.Add(this.txtMarca);
+            this.grpDatosZapato.Controls.Add(this.txtTalla);
+            this.grpDatosZapato.Controls.Add(this.txtID);
+            this.grpDatosZapato.Controls.Add(this.txtTipoCalzado);
+            this.grpDatosZapato.Controls.Add(this.label8);
+            this.grpDatosZapato.Controls.Add(this.label7);
+            this.grpDatosZapato.Controls.Add(this.label6);
+            this.grpDatosZapato.Controls.Add(this.label5);
+            this.grpDatosZapato.Controls.Add(this.label4);
+            this.grpDatosZapato.Controls.Add(this.label3);
+            this.grpDatosZapato.Controls.Add(this.label2);
+            this.grpDatosZapato.Controls.Add(this.label9);
+            this.grpDatosZapato.Controls.Add(this.label1);
+            this.grpDatosZapato.Controls.Add(this.radActualizar);
+            this.grpDatosZapato.Controls.Add(this.radAgregar);
+            this.grpDatosZapato.Font = new System.Drawing.Font("212 Orion Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.grpDatosZapato.ForeColor = System.Drawing.Color.Yellow;
+            this.grpDatosZapato.Location = new System.Drawing.Point(12, 12);
+            this.grpDatosZapato.Name = "grpDatosZapato";
+            this.grpDatosZapato.Size = new System.Drawing.Size(423, 426);
+            this.grpDatosZapato.TabIndex = 0;
+            this.grpDatosZapato.TabStop = false;
+            this.grpDatosZapato.Text = "Datos del producto:";
             // 
             // btnAccion
             // 
-            btnAccion.Location = new Point(6, 391);
-            btnAccion.Name = "btnAccion";
-            btnAccion.Size = new Size(115, 29);
-            btnAccion.TabIndex = 1;
-            btnAccion.UseVisualStyleBackColor = true;
-            btnAccion.Click += btnAccion_Click;
+            this.btnAccion.Location = new System.Drawing.Point(108, 390);
+            this.btnAccion.Name = "btnAccion";
+            this.btnAccion.Size = new System.Drawing.Size(115, 29);
+            this.btnAccion.TabIndex = 1;
+            this.btnAccion.UseVisualStyleBackColor = true;
             // 
             // cmbProveedores
             // 
-            cmbProveedores.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbProveedores.FormattingEnabled = true;
-            cmbProveedores.Location = new Point(196, 356);
-            cmbProveedores.Name = "cmbProveedores";
-            cmbProveedores.Size = new Size(146, 28);
-            cmbProveedores.TabIndex = 1;
+            this.cmbProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProveedores.FormattingEnabled = true;
+            this.cmbProveedores.Location = new System.Drawing.Point(196, 356);
+            this.cmbProveedores.Name = "cmbProveedores";
+            this.cmbProveedores.Size = new System.Drawing.Size(146, 30);
+            this.cmbProveedores.TabIndex = 1;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(196, 321);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(146, 27);
-            txtPrecio.TabIndex = 1;
+            this.txtPrecio.Location = new System.Drawing.Point(196, 321);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(146, 29);
+            this.txtPrecio.TabIndex = 1;
             // 
             // txtExistencias
             // 
-            txtExistencias.Location = new Point(196, 288);
-            txtExistencias.Name = "txtExistencias";
-            txtExistencias.Size = new Size(146, 27);
-            txtExistencias.TabIndex = 1;
+            this.txtExistencias.Location = new System.Drawing.Point(196, 288);
+            this.txtExistencias.Name = "txtExistencias";
+            this.txtExistencias.Size = new System.Drawing.Size(146, 29);
+            this.txtExistencias.TabIndex = 1;
             // 
             // txtColor
             // 
-            txtColor.Location = new Point(196, 252);
-            txtColor.Name = "txtColor";
-            txtColor.Size = new Size(146, 27);
-            txtColor.TabIndex = 1;
+            this.txtColor.Location = new System.Drawing.Point(196, 252);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(146, 29);
+            this.txtColor.TabIndex = 1;
             // 
             // txtModelo
             // 
-            txtModelo.Location = new Point(196, 219);
-            txtModelo.Name = "txtModelo";
-            txtModelo.Size = new Size(146, 27);
-            txtModelo.TabIndex = 1;
+            this.txtModelo.Location = new System.Drawing.Point(196, 219);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(146, 29);
+            this.txtModelo.TabIndex = 1;
             // 
             // txtMarca
             // 
-            txtMarca.Location = new Point(196, 182);
-            txtMarca.Name = "txtMarca";
-            txtMarca.Size = new Size(146, 27);
-            txtMarca.TabIndex = 1;
+            this.txtMarca.Location = new System.Drawing.Point(196, 182);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(146, 29);
+            this.txtMarca.TabIndex = 1;
             // 
             // txtTalla
             // 
-            txtTalla.Location = new Point(196, 147);
-            txtTalla.Name = "txtTalla";
-            txtTalla.Size = new Size(146, 27);
-            txtTalla.TabIndex = 1;
+            this.txtTalla.Location = new System.Drawing.Point(196, 147);
+            this.txtTalla.Name = "txtTalla";
+            this.txtTalla.Size = new System.Drawing.Size(146, 29);
+            this.txtTalla.TabIndex = 1;
             // 
             // txtID
             // 
-            txtID.Location = new Point(196, 90);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(146, 27);
-            txtID.TabIndex = 1;
+            this.txtID.Location = new System.Drawing.Point(196, 90);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(146, 29);
+            this.txtID.TabIndex = 1;
             // 
             // txtTipoCalzado
             // 
-            txtTipoCalzado.Location = new Point(196, 117);
-            txtTipoCalzado.Name = "txtTipoCalzado";
-            txtTipoCalzado.Size = new Size(146, 27);
-            txtTipoCalzado.TabIndex = 1;
+            this.txtTipoCalzado.Location = new System.Drawing.Point(196, 117);
+            this.txtTipoCalzado.Name = "txtTipoCalzado";
+            this.txtTipoCalzado.Size = new System.Drawing.Size(146, 29);
+            this.txtTipoCalzado.TabIndex = 1;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(6, 356);
-            label8.Name = "label8";
-            label8.Size = new Size(80, 20);
-            label8.TabIndex = 1;
-            label8.Text = "Proveedor:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 356);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 22);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Proveedor:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(6, 324);
-            label7.Name = "label7";
-            label7.Size = new Size(53, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Precio:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 22);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Precio:";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(6, 288);
-            label6.Name = "label6";
-            label6.Size = new Size(83, 20);
-            label6.TabIndex = 1;
-            label6.Text = "Existencias:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 288);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 22);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Existencias:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 252);
-            label5.Name = "label5";
-            label5.Size = new Size(48, 20);
-            label5.TabIndex = 1;
-            label5.Text = "Color:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 22);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Color:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 219);
-            label4.Name = "label4";
-            label4.Size = new Size(64, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Modelo:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 22);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Modelo:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(6, 189);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 20);
-            label3.TabIndex = 1;
-            label3.Text = "Marca:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Marca:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 154);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Talla:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Talla:";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(6, 90);
-            label9.Name = "label9";
-            label9.Size = new Size(93, 20);
-            label9.TabIndex = 1;
-            label9.Text = "ID o Codigo:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(104, 22);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "ID o Codigo:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 124);
-            label1.Name = "label1";
-            label1.Size = new Size(121, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Tipo de Calzado:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 22);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tipo de Calzado:";
             // 
             // radActualizar
             // 
-            radActualizar.Appearance = Appearance.Button;
-            radActualizar.AutoSize = true;
-            radActualizar.BackColor = SystemColors.Control;
-            radActualizar.Location = new Point(196, 40);
-            radActualizar.Name = "radActualizar";
-            radActualizar.Size = new Size(146, 30);
-            radActualizar.TabIndex = 1;
-            radActualizar.Text = "Actualizar Calzado:";
-            radActualizar.UseVisualStyleBackColor = false;
-            radActualizar.CheckedChanged += radActualizar_CheckedChanged;
+            this.radActualizar.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radActualizar.AutoSize = true;
+            this.radActualizar.BackColor = System.Drawing.Color.Black;
+            this.radActualizar.Location = new System.Drawing.Point(233, 40);
+            this.radActualizar.Name = "radActualizar";
+            this.radActualizar.Size = new System.Drawing.Size(174, 32);
+            this.radActualizar.TabIndex = 1;
+            this.radActualizar.Text = "Actualizar Calzado:";
+            this.radActualizar.UseVisualStyleBackColor = false;
             // 
             // radAgregar
             // 
-            radAgregar.Appearance = Appearance.Button;
-            radAgregar.AutoSize = true;
-            radAgregar.Checked = true;
-            radAgregar.Location = new Point(6, 40);
-            radAgregar.Name = "radAgregar";
-            radAgregar.Size = new Size(184, 30);
-            radAgregar.TabIndex = 1;
-            radAgregar.TabStop = true;
-            radAgregar.Text = "Agregar Nuevo Producto";
-            radAgregar.UseVisualStyleBackColor = true;
-            radAgregar.CheckedChanged += radAgregar_CheckedChanged;
+            this.radAgregar.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radAgregar.AutoSize = true;
+            this.radAgregar.BackColor = System.Drawing.Color.Black;
+            this.radAgregar.Checked = true;
+            this.radAgregar.Location = new System.Drawing.Point(6, 40);
+            this.radAgregar.Name = "radAgregar";
+            this.radAgregar.Size = new System.Drawing.Size(221, 32);
+            this.radAgregar.TabIndex = 1;
+            this.radAgregar.TabStop = true;
+            this.radAgregar.Text = "Agregar Nuevo Producto";
+            this.radAgregar.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dtgcID, dtgcTipoCalzado, dtgcTalla, dtgcMarca, dtgcModelo, dtgcStock, dtgcColor, dtgcPrecio, dtgcProveedor });
-            dataGridView1.Location = new Point(371, 23);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1185, 415);
-            dataGridView1.TabIndex = 1;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgcID,
+            this.dtgcTipoCalzado,
+            this.dtgcTalla,
+            this.dtgcMarca,
+            this.dtgcModelo,
+            this.dtgcStock,
+            this.dtgcColor,
+            this.dtgcPrecio,
+            this.dtgcProveedor});
+            this.dataGridView1.Location = new System.Drawing.Point(441, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(1185, 415);
+            this.dataGridView1.TabIndex = 1;
             // 
             // dtgcID
             // 
-            dtgcID.HeaderText = "ID";
-            dtgcID.MinimumWidth = 6;
-            dtgcID.Name = "dtgcID";
-            dtgcID.ReadOnly = true;
-            dtgcID.Width = 125;
+            this.dtgcID.HeaderText = "ID";
+            this.dtgcID.MinimumWidth = 6;
+            this.dtgcID.Name = "dtgcID";
+            this.dtgcID.ReadOnly = true;
+            this.dtgcID.Width = 125;
             // 
             // dtgcTipoCalzado
             // 
-            dtgcTipoCalzado.HeaderText = "Tipo de Calzado";
-            dtgcTipoCalzado.MinimumWidth = 6;
-            dtgcTipoCalzado.Name = "dtgcTipoCalzado";
-            dtgcTipoCalzado.ReadOnly = true;
-            dtgcTipoCalzado.Width = 125;
+            this.dtgcTipoCalzado.HeaderText = "Tipo de Calzado";
+            this.dtgcTipoCalzado.MinimumWidth = 6;
+            this.dtgcTipoCalzado.Name = "dtgcTipoCalzado";
+            this.dtgcTipoCalzado.ReadOnly = true;
+            this.dtgcTipoCalzado.Width = 125;
             // 
             // dtgcTalla
             // 
-            dtgcTalla.HeaderText = "Talla";
-            dtgcTalla.MinimumWidth = 6;
-            dtgcTalla.Name = "dtgcTalla";
-            dtgcTalla.ReadOnly = true;
-            dtgcTalla.Width = 125;
+            this.dtgcTalla.HeaderText = "Talla";
+            this.dtgcTalla.MinimumWidth = 6;
+            this.dtgcTalla.Name = "dtgcTalla";
+            this.dtgcTalla.ReadOnly = true;
+            this.dtgcTalla.Width = 125;
             // 
             // dtgcMarca
             // 
-            dtgcMarca.HeaderText = "Marca";
-            dtgcMarca.MinimumWidth = 6;
-            dtgcMarca.Name = "dtgcMarca";
-            dtgcMarca.ReadOnly = true;
-            dtgcMarca.Width = 125;
+            this.dtgcMarca.HeaderText = "Marca";
+            this.dtgcMarca.MinimumWidth = 6;
+            this.dtgcMarca.Name = "dtgcMarca";
+            this.dtgcMarca.ReadOnly = true;
+            this.dtgcMarca.Width = 125;
             // 
             // dtgcModelo
             // 
-            dtgcModelo.HeaderText = "Modelo";
-            dtgcModelo.MinimumWidth = 6;
-            dtgcModelo.Name = "dtgcModelo";
-            dtgcModelo.ReadOnly = true;
-            dtgcModelo.Width = 125;
+            this.dtgcModelo.HeaderText = "Modelo";
+            this.dtgcModelo.MinimumWidth = 6;
+            this.dtgcModelo.Name = "dtgcModelo";
+            this.dtgcModelo.ReadOnly = true;
+            this.dtgcModelo.Width = 125;
             // 
             // dtgcStock
             // 
-            dtgcStock.HeaderText = "Stock";
-            dtgcStock.MinimumWidth = 6;
-            dtgcStock.Name = "dtgcStock";
-            dtgcStock.ReadOnly = true;
-            dtgcStock.Width = 125;
+            this.dtgcStock.HeaderText = "Stock";
+            this.dtgcStock.MinimumWidth = 6;
+            this.dtgcStock.Name = "dtgcStock";
+            this.dtgcStock.ReadOnly = true;
+            this.dtgcStock.Width = 125;
             // 
             // dtgcColor
             // 
-            dtgcColor.HeaderText = "Color";
-            dtgcColor.MinimumWidth = 6;
-            dtgcColor.Name = "dtgcColor";
-            dtgcColor.ReadOnly = true;
-            dtgcColor.Width = 125;
+            this.dtgcColor.HeaderText = "Color";
+            this.dtgcColor.MinimumWidth = 6;
+            this.dtgcColor.Name = "dtgcColor";
+            this.dtgcColor.ReadOnly = true;
+            this.dtgcColor.Width = 125;
             // 
             // dtgcPrecio
             // 
-            dtgcPrecio.HeaderText = "Precio";
-            dtgcPrecio.MinimumWidth = 6;
-            dtgcPrecio.Name = "dtgcPrecio";
-            dtgcPrecio.ReadOnly = true;
-            dtgcPrecio.Width = 125;
+            this.dtgcPrecio.HeaderText = "Precio";
+            this.dtgcPrecio.MinimumWidth = 6;
+            this.dtgcPrecio.Name = "dtgcPrecio";
+            this.dtgcPrecio.ReadOnly = true;
+            this.dtgcPrecio.Width = 125;
             // 
             // dtgcProveedor
             // 
-            dtgcProveedor.HeaderText = "Proveedor";
-            dtgcProveedor.MinimumWidth = 6;
-            dtgcProveedor.Name = "dtgcProveedor";
-            dtgcProveedor.ReadOnly = true;
-            dtgcProveedor.Width = 125;
+            this.dtgcProveedor.HeaderText = "Proveedor";
+            this.dtgcProveedor.MinimumWidth = 6;
+            this.dtgcProveedor.Name = "dtgcProveedor";
+            this.dtgcProveedor.ReadOnly = true;
+            this.dtgcProveedor.Width = 125;
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1568, 458);
-            Controls.Add(dataGridView1);
-            Controls.Add(grpDatosZapato);
-            Name = "Inventario";
-            Text = "Inventario";
-            Load += Inventario_Load;
-            grpDatosZapato.ResumeLayout(false);
-            grpDatosZapato.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoZapateria.Properties.Resources.FondoTenis4;
+            this.ClientSize = new System.Drawing.Size(1661, 458);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grpDatosZapato);
+            this.Name = "Inventario";
+            this.Text = "Inventario";
+            this.grpDatosZapato.ResumeLayout(false);
+            this.grpDatosZapato.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -424,6 +424,5 @@
         private DataGridViewTextBoxColumn dtgcColor;
         private DataGridViewTextBoxColumn dtgcPrecio;
         private DataGridViewTextBoxColumn dtgcProveedor;
-        private Button btnRegresar;
     }
 }

@@ -36,7 +36,7 @@ namespace ProyectoZapateria
             string contraseña = TxtContrasena.Text;
 
             // Establecer la conexión con SQL Server
-            string connectionString = "server=LAPTOP-I1BSF5OM\\SQLEXPRESS ; database=PuntoVenta ; integrated security = true";// Data Source=server;Initial Catalog=database;User ID=username;Password=password;";
+            string connectionString = "server=WENDY\\SQLEXPRESS ; database=PuntoVenta ; integrated security = true";// Data Source=server;Initial Catalog=database;User ID=username;Password=password;";
             SqlConnection connection = new SqlConnection(connectionString);
             {
                 try
