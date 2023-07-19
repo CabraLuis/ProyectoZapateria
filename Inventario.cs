@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoZapateria
@@ -41,6 +42,7 @@ namespace ProyectoZapateria
                     command.ExecuteScalar();
                     MessageBox.Show("Se han agregado correctamente los datos", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarDatagrid();
+                    connection.Close();
                 }
                 if (radActualizar.Checked)
                 {
@@ -51,7 +53,6 @@ namespace ProyectoZapateria
             {
                 MessageBox.Show("Error: " + x.Message);
             }
-
         }
 
         private void radAgregar_CheckedChanged(object sender, EventArgs e)
@@ -100,7 +101,53 @@ namespace ProyectoZapateria
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            // Obtener el valor ingresado en el TextBox de búsqueda
+            string valorBusqueda = txtID.Text;
 
+            // Realizar la consulta utilizando el valor de búsqueda
+            string query = "SELECT Id_Zapato, Tipo_Calzado,Talla,Marca,Modelo,Color,Stock,Precio,P.Nombre FROM General.Zapato inner join General.Proveedor P ON General.Zapato. WHERE ID_Zapato  = @ValorBusqueda"; // Reemplaza "MiTabla" y "CampoBusqueda" con los nombres adecuados
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ValorBusqueda", valorBusqueda);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Si se encuentra el registro, llenar los controles con los datos obtenidos
+                                string id = reader["Id_Zapato"].ToString();
+                                string Tipo = reader["Tipo_Calzado"].ToString();
+                                int Talla = int.Parse(reader["Talla"].ToString());
+                                string Marca = reader["Marca"].ToString();
+                                string Modelo = reader["Modelo"].ToString();
+                                string Color = reader["Color"].ToString();
+                                int Stock = int.Parse(reader["Stock"].ToString());
+                                string Precio = reader["Precio"].ToString();
+                                txtID.Text = id;
+                                txtTipoCalzado.Text = Tipo;
+                                cmbProveedores.Text = ;
+                            }
+                            else
+                            {
+                                // Si no se encuentra el registro, mostrar un mensaje o realizar alguna acción adicional
+                                MessageBox.Show("No se encontró el registro.");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de excepciones
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            
         }
 
         private void Inventario_Load(object sender, EventArgs e)
