@@ -34,7 +34,7 @@
             btnAccion = new Button();
             txtDireccion = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtTelefono = new TextBox();
             label2 = new Label();
             txtNombre = new TextBox();
             label1 = new Label();
@@ -58,7 +58,7 @@
             grpDatosProveedor.Controls.Add(btnAccion);
             grpDatosProveedor.Controls.Add(txtDireccion);
             grpDatosProveedor.Controls.Add(label3);
-            grpDatosProveedor.Controls.Add(textBox1);
+            grpDatosProveedor.Controls.Add(txtTelefono);
             grpDatosProveedor.Controls.Add(label2);
             grpDatosProveedor.Controls.Add(txtNombre);
             grpDatosProveedor.Controls.Add(label1);
@@ -83,6 +83,7 @@
             btnSalir.TabIndex = 7;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnInicio
             // 
@@ -122,12 +123,12 @@
             label3.TabIndex = 1;
             label3.Text = "Direccion:";
             // 
-            // textBox1
+            // txtTelefono
             // 
-            textBox1.Location = new Point(124, 131);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 30);
-            textBox1.TabIndex = 1;
+            txtTelefono.Location = new Point(124, 131);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(125, 30);
+            txtTelefono.TabIndex = 1;
             // 
             // label2
             // 
@@ -271,7 +272,7 @@
         private Button btnAccion;
         private TextBox txtDireccion;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtTelefono;
         private Label label2;
         private TextBox txtNombre;
         private DataGridView dtgDatosProveedores;
