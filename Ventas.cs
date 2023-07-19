@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -28,11 +27,14 @@ namespace ProyectoZapateria
 
         }
 
-        private void btnCancelarVenta_Click(object sender, EventArgs e)
+        private void grpDatosCalzado_Enter(object sender, EventArgs e)
         {
-            GenerarVenta generarVenta = new GenerarVenta();
-            generarVenta.Show();
-            this.Hide();
+
+        }
+
+        private void btnRealizarVenta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,29 +7,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient; //LIBIRERIA PARA CONECTAR BASE DE DATOS SQL
-using System.Net.Sockets;
-using System.Collections;
 
 namespace ProyectoZapateria
 {
     public partial class RegistroProveedor : Form
     {
+        string connectionString = "server=LAPTOP-I1BSF5OM\\SQLEXPRESS; database=PuntoVenta ; integrated security = true";// Data Source=server;Initial Catalog=database;User ID=username;Password=password;";
+        string consulta = "";
+        GenerarVenta Venta2 = new GenerarVenta();
         public RegistroProveedor()
         {
             InitializeComponent();
         }
 
-        private void RegistroProveedor_Load(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
-            if (radActualizarProveedor.Checked) { btnAccion.Text = "Actualizar"; }
-            if (radAgregarProveedor.Checked) { btnAccion.Text = "Agregar"; }
-            if (radEliminarProveedor.Checked) { btnAccion.Text = "Eliminar"; }
+
+            Venta2.Show();
+            this.Hide();
+        }
+
+        private void btnAccion_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = ""; //"SELECT TipoUser FROM Usuarios WHERE Nom_User = @NombreUsuario AND Contra = @Contraseña";
+            string Nombre = txtNombre.Text;
+            string Telefono = txtTelefono.Text;
+            string Direccion = txtDireccion.Text;
+                  
+            
+            if (radActualizarProveedor.Checked)
+            {
+
+            }
+            else if (radAgregarProveedor.Checked)
+            {
+                SqlCommand command = new SqlCommand(consulta, connection);
+                command.Parameters.AddWithValue("@IdProveedor", nombreUsuario);
+                command.Parameters.AddWithValue("@nombre", Nombre);
+                command.Parameters.AddWithValue("@telefono", Telefono);
+            }
+            else if (radEliminarProveedor.Checked)
+            {
+
+            }
+
         }
 
         private void radAgregarProveedor_CheckedChanged(object sender, EventArgs e)
         {
             btnAccion.Text = "Agregar";
+            consulta = "INSERT INTO PROVEEDOR(ID_Provedor,Nombre,Telefono,Direccion) VALUES(@Idproveedor,@Nombre,@Telefono,@Direccion)";
         }
 
         private void radActualizarProveedor_CheckedChanged(object sender, EventArgs e)
@@ -42,68 +71,15 @@ namespace ProyectoZapateria
             btnAccion.Text = "Eliminar";
         }
 
-        private void btnAccion_Click(object sender, EventArgs e)
+        private void RegistroProveedor_Load(object sender, EventArgs e)
         {
-            string Nombre = txtNombre.Text;
-            string Direccion = txtDireccion.Text;
-            string Telefono = txtTelefono.Text;
-            string connectionString = "server=LAPTOP-I1BSF5OM\\SQLEXPRESS ; database=PuntoVenta ; integrated security = true";// Data Source=server;Initial Catalog=database;User ID=username;Password=password;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            //Sentencia para sacar el ID del proveedor
-            string ase = "Select Count(*) from Proveedor";
-            SqlCommand command2 = new SqlCommand(ase, connection);
-            object d = command2.ExecuteScalar();
-            d.GetType();
-            int a = Convert.ToInt32(d);
-            a = a + 1;
-            {
-                try
-                {
-                    if(radAgregarProveedor.Checked == true)
-                    {
-                        //Insercion de un nuevo proveedor
-                        //connection.Open();
-                        string query = "INSERT INTO Proveedor (ID_Provedor,Nombre,Telefono,Direccion) VALUES(@ID_Proveedor,@Nombre,@Direccion,@Telefono)";
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@ID_Proveedor", a);
-                        command.Parameters.AddWithValue("@Nombre", Nombre);
-                        command.Parameters.AddWithValue("@Telefono", Telefono);
-                        command.Parameters.AddWithValue("@Direccion", Direccion);
-                        object Datos = command.ExecuteScalar();
-                        MessageBox.Show("Datos Ingresados Correctamente");
-                        connection.Close();
-                    }  
-                    else if (radActualizarProveedor.Checked == true)
-                    {
-
-                    }
-                    else if (radEliminarProveedor.Checked == true)
-                    {
-                        //Insercion de un nuevo proveedor
-                        //connection.Open();
-                        string query = "Delete from Proveedor (ID_Provedor,Nombre,Telefono,Direccion) VALUES(@ID_Proveedor,@Nombre,@Direccion,@Telefono)";
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@ID_Proveedor", a);
-                        command.Parameters.AddWithValue("@Nombre", Nombre);
-                        command.Parameters.AddWithValue("@Telefono", Telefono);
-                        command.Parameters.AddWithValue("@Direccion", Direccion);
-                        object Datos = command.ExecuteScalar();
-                        MessageBox.Show("Proveedor Eliminado Correctamente");
-                        connection.Close();
-                    } 
-                }
-                catch (Exception ex)
-                {
-                    // Manejar cualquier error de conexión
-                    MessageBox.Show("Error de conexión: " + ex.Message);
-                }
-            }
+            radAgregarProveedor.Checked = true;
         }
 
-        public void MostrarDatos()
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-           
+            Venta2.Show();
+            this.Hide();
         }
     }
 }

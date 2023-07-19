@@ -12,7 +12,6 @@ namespace ProyectoZapateria
 {
     public partial class GenerarVenta : Form
     {
-        static Ventas Ventas1 = new Ventas();
         public string ay;
         public string mensajeBienvenida;
         public GenerarVenta(object a)
@@ -53,6 +52,7 @@ namespace ProyectoZapateria
 
         private void btnGenerarVenta_Click(object sender, EventArgs e)
         {
+            Ventas Ventas1 = new Ventas();
             Ventas1.Show();
             this.Hide();
         }
@@ -66,14 +66,26 @@ namespace ProyectoZapateria
 
         private void btnRegisProveedor_Click(object sender, EventArgs e)
         {
-            RegistroProveedor Proveedores = new RegistroProveedor();
-            Proveedores.Show();
+
+        }
+
+        private void btnGenerarVenta_Click_1(object sender, EventArgs e)
+        {
+            Ventas ControlVentas = new Ventas();
+            ControlVentas.Show();
+            this.Hide();
+        }
+
+        private void btnRegisProveedor_Click_1(object sender, EventArgs e)
+        {
+            RegistroProveedor proveedor = new RegistroProveedor();
+            proveedor.Show();
             this.Hide();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+            Application.Exit();
         }
     }
 }

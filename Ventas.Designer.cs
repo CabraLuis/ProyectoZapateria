@@ -33,7 +33,6 @@
             btnEliminar = new Button();
             btnBuscar = new Button();
             btnAgregar = new Button();
-            btnModificar = new Button();
             txtTalla = new TextBox();
             txtID = new TextBox();
             txtCantidad = new TextBox();
@@ -70,6 +69,7 @@
             dtcgTotal = new DataGridViewTextBoxColumn();
             dtcDescuento = new DataGridViewTextBoxColumn();
             dtgcEmpleado = new DataGridViewTextBoxColumn();
+            btnModificar = new Button();
             lblHoraActual = new Label();
             grpDatosCalzado.SuspendLayout();
             grpDatosCliente.SuspendLayout();
@@ -84,15 +84,16 @@
             lblHoraActual.BorderStyle = BorderStyle.Fixed3D;
             lblHoraActual.Location = new Point(896, 34);
             lblHoraActual.Name = "lblHoraActual";
-            lblHoraActual.Size = new Size(2, 22);
+            lblHoraActual.Size = new Size(2, 27);
             lblHoraActual.TabIndex = 5;
             // 
             // grpDatosCalzado
             // 
+            grpDatosCalzado.BackgroundImage = Properties.Resources.FondoTenis11;
             grpDatosCalzado.Controls.Add(btnEliminar);
             grpDatosCalzado.Controls.Add(btnBuscar);
-            grpDatosCalzado.Controls.Add(btnAgregar);
             grpDatosCalzado.Controls.Add(btnModificar);
+            grpDatosCalzado.Controls.Add(btnAgregar);
             grpDatosCalzado.Controls.Add(txtTalla);
             grpDatosCalzado.Controls.Add(txtID);
             grpDatosCalzado.Controls.Add(txtCantidad);
@@ -101,12 +102,14 @@
             grpDatosCalzado.Controls.Add(label4);
             grpDatosCalzado.Controls.Add(label2);
             grpDatosCalzado.Controls.Add(label1);
+            grpDatosCalzado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             grpDatosCalzado.Location = new Point(12, 12);
             grpDatosCalzado.Name = "grpDatosCalzado";
-            grpDatosCalzado.Size = new Size(288, 331);
+            grpDatosCalzado.Size = new Size(300, 331);
             grpDatosCalzado.TabIndex = 0;
             grpDatosCalzado.TabStop = false;
             grpDatosCalzado.Text = "Datos Calzado:";
+            grpDatosCalzado.Enter += grpDatosCalzado_Enter;
             // 
             // btnEliminar
             // 
@@ -134,84 +137,80 @@
             btnAgregar.TabIndex = 1;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
-            // 
-            // btnModificar
-            // 
-            btnModificar.Location = new Point(7, 176);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(268, 29);
-            btnModificar.TabIndex = 1;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
             // 
             // txtTalla
             // 
-            txtTalla.Location = new Point(124, 134);
+            txtTalla.Location = new Point(131, 134);
             txtTalla.Name = "txtTalla";
-            txtTalla.Size = new Size(151, 27);
+            txtTalla.Size = new Size(151, 30);
             txtTalla.TabIndex = 1;
             // 
             // txtID
             // 
-            txtID.Location = new Point(124, 68);
+            txtID.Location = new Point(143, 69);
             txtID.Name = "txtID";
-            txtID.Size = new Size(151, 27);
+            txtID.Size = new Size(151, 30);
             txtID.TabIndex = 1;
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(124, 101);
+            txtCantidad.Location = new Point(131, 101);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(151, 27);
+            txtCantidad.Size = new Size(151, 30);
             txtCantidad.TabIndex = 1;
             // 
             // cmbBusqueda
             // 
             cmbBusqueda.FormattingEnabled = true;
-            cmbBusqueda.Location = new Point(124, 26);
+            cmbBusqueda.Location = new Point(148, 26);
             cmbBusqueda.Name = "cmbBusqueda";
-            cmbBusqueda.Size = new Size(151, 28);
+            cmbBusqueda.Size = new Size(151, 33);
             cmbBusqueda.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Silver;
             label3.Location = new Point(19, 137);
             label3.Name = "label3";
-            label3.Size = new Size(42, 20);
+            label3.Size = new Size(67, 25);
             label3.TabIndex = 1;
             label3.Text = "Talla:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Silver;
             label4.Location = new Point(16, 72);
             label4.Name = "label4";
-            label4.Size = new Size(93, 20);
+            label4.Size = new Size(133, 25);
             label4.TabIndex = 1;
             label4.Text = "ID o Codigo:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Silver;
             label2.Location = new Point(19, 101);
             label2.Name = "label2";
-            label2.Size = new Size(72, 20);
+            label2.Size = new Size(106, 25);
             label2.TabIndex = 1;
             label2.Text = "Cantidad:";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Silver;
             label1.Location = new Point(19, 29);
             label1.Name = "label1";
-            label1.Size = new Size(82, 20);
+            label1.Size = new Size(123, 25);
             label1.TabIndex = 1;
             label1.Text = "Buscar por:";
             // 
             // grpDatosCliente
             // 
+            grpDatosCliente.BackColor = SystemColors.ActiveCaptionText;
+            grpDatosCliente.BackgroundImage = Properties.Resources.FondoTenis2;
             grpDatosCliente.Controls.Add(txtDireccion);
             grpDatosCliente.Controls.Add(label8);
             grpDatosCliente.Controls.Add(txtApellido);
@@ -220,6 +219,8 @@
             grpDatosCliente.Controls.Add(label6);
             grpDatosCliente.Controls.Add(txtNombreCliente);
             grpDatosCliente.Controls.Add(label5);
+            grpDatosCliente.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpDatosCliente.ForeColor = Color.DeepSkyBlue;
             grpDatosCliente.Location = new Point(12, 349);
             grpDatosCliente.Name = "grpDatosCliente";
             grpDatosCliente.Size = new Size(288, 224);
@@ -231,7 +232,7 @@
             // 
             txtDireccion.Location = new Point(110, 176);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(172, 27);
+            txtDireccion.Size = new Size(172, 30);
             txtDireccion.TabIndex = 2;
             // 
             // label8
@@ -239,7 +240,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(11, 179);
             label8.Name = "label8";
-            label8.Size = new Size(72, 20);
+            label8.Size = new Size(102, 25);
             label8.TabIndex = 2;
             label8.Text = "Direccion";
             // 
@@ -247,7 +248,7 @@
             // 
             txtApellido.Location = new Point(110, 139);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(125, 27);
+            txtApellido.Size = new Size(125, 30);
             txtApellido.TabIndex = 2;
             // 
             // label7
@@ -255,7 +256,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(7, 142);
             label7.Name = "label7";
-            label7.Size = new Size(69, 20);
+            label7.Size = new Size(97, 25);
             label7.TabIndex = 2;
             label7.Text = "Apellido:";
             // 
@@ -263,7 +264,7 @@
             // 
             txtTelefono.Location = new Point(110, 89);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(125, 27);
+            txtTelefono.Size = new Size(125, 30);
             txtTelefono.TabIndex = 2;
             // 
             // label6
@@ -271,7 +272,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(7, 96);
             label6.Name = "label6";
-            label6.Size = new Size(70, 20);
+            label6.Size = new Size(104, 25);
             label6.TabIndex = 2;
             label6.Text = "Telefono:";
             // 
@@ -279,7 +280,7 @@
             // 
             txtNombreCliente.Location = new Point(110, 43);
             txtNombreCliente.Name = "txtNombreCliente";
-            txtNombreCliente.Size = new Size(125, 27);
+            txtNombreCliente.Size = new Size(125, 30);
             txtNombreCliente.TabIndex = 2;
             // 
             // label5
@@ -287,39 +288,45 @@
             label5.AutoSize = true;
             label5.Location = new Point(7, 50);
             label5.Name = "label5";
-            label5.Size = new Size(67, 20);
+            label5.Size = new Size(94, 25);
             label5.TabIndex = 2;
             label5.Text = "Nombre:";
             // 
             // btnRealizarVenta
             // 
+            btnRealizarVenta.BackColor = Color.DarkCyan;
+            btnRealizarVenta.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnRealizarVenta.Location = new Point(12, 579);
             btnRealizarVenta.Name = "btnRealizarVenta";
             btnRealizarVenta.Size = new Size(288, 29);
             btnRealizarVenta.TabIndex = 2;
             btnRealizarVenta.Text = "Realizar Venta";
-            btnRealizarVenta.UseVisualStyleBackColor = true;
+            btnRealizarVenta.UseVisualStyleBackColor = false;
+            btnRealizarVenta.Click += btnRealizarVenta_Click;
             // 
             // btnCancelarVenta
             // 
+            btnCancelarVenta.BackColor = Color.DarkCyan;
+            btnCancelarVenta.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelarVenta.Location = new Point(12, 614);
             btnCancelarVenta.Name = "btnCancelarVenta";
             btnCancelarVenta.Size = new Size(288, 29);
             btnCancelarVenta.TabIndex = 3;
             btnCancelarVenta.Text = "Cancelar Venta";
-            btnCancelarVenta.UseVisualStyleBackColor = true;
-            btnCancelarVenta.Click += btnCancelarVenta_Click;
+            btnCancelarVenta.UseVisualStyleBackColor = false;
             // 
             // grpEmpleado
             // 
-            grpEmpleado.BackgroundImageLayout = ImageLayout.Center;
+            grpEmpleado.BackColor = Color.DimGray;
+            grpEmpleado.BackgroundImage = Properties.Resources.FondoTenis3;
             grpEmpleado.Controls.Add(lblHoraActual);
             grpEmpleado.Controls.Add(label11);
             grpEmpleado.Controls.Add(lblFechaActual);
             grpEmpleado.Controls.Add(label10);
             grpEmpleado.Controls.Add(cmbEmpleados);
             grpEmpleado.Controls.Add(label9);
-            grpEmpleado.FlatStyle = FlatStyle.System;
+            grpEmpleado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpEmpleado.ForeColor = Color.DarkTurquoise;
             grpEmpleado.Location = new Point(318, 12);
             grpEmpleado.Name = "grpEmpleado";
             grpEmpleado.RightToLeft = RightToLeft.No;
@@ -327,14 +334,13 @@
             grpEmpleado.TabIndex = 4;
             grpEmpleado.TabStop = false;
             grpEmpleado.Text = "Identificacion:";
-            grpEmpleado.Enter += groupBox1_Enter;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Location = new Point(789, 34);
             label11.Name = "label11";
-            label11.Size = new Size(91, 20);
+            label11.Size = new Size(132, 25);
             label11.TabIndex = 4;
             label11.Text = "Hora Actual:";
             // 
@@ -344,7 +350,7 @@
             lblFechaActual.BorderStyle = BorderStyle.Fixed3D;
             lblFechaActual.Location = new Point(703, 32);
             lblFechaActual.Name = "lblFechaActual";
-            lblFechaActual.Size = new Size(2, 22);
+            lblFechaActual.Size = new Size(2, 27);
             lblFechaActual.TabIndex = 3;
             // 
             // label10
@@ -352,7 +358,7 @@
             label10.AutoSize = true;
             label10.Location = new Point(589, 34);
             label10.Name = "label10";
-            label10.Size = new Size(96, 20);
+            label10.Size = new Size(146, 25);
             label10.TabIndex = 2;
             label10.Text = "Fecha Actual:";
             // 
@@ -362,15 +368,15 @@
             cmbEmpleados.FormattingEnabled = true;
             cmbEmpleados.Location = new Point(415, 29);
             cmbEmpleados.Name = "cmbEmpleados";
-            cmbEmpleados.Size = new Size(151, 28);
+            cmbEmpleados.Size = new Size(151, 33);
             cmbEmpleados.TabIndex = 1;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(329, 34);
+            label9.Location = new Point(294, 34);
             label9.Name = "label9";
-            label9.Size = new Size(80, 20);
+            label9.Size = new Size(115, 25);
             label9.TabIndex = 0;
             label9.Text = "Empleado:";
             // 
@@ -378,6 +384,7 @@
             // 
             dtgVentas.AllowUserToAddRows = false;
             dtgVentas.AllowUserToDeleteRows = false;
+            dtgVentas.BorderStyle = BorderStyle.Fixed3D;
             dtgVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgVentas.Columns.AddRange(new DataGridViewColumn[] { dtgcIDVenta, dtgcIDZapato, dtgcTipoCalzado, dtgcTalla, dtcNombreCliente, dtgcCantidad, dtgcSubtotal, dtcgTotal, dtcDescuento, dtgcEmpleado });
             dtgVentas.Location = new Point(318, 99);
@@ -468,11 +475,21 @@
             dtgcEmpleado.ReadOnly = true;
             dtgcEmpleado.Width = 125;
             // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(7, 176);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(268, 29);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1647, 653);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(1647, 658);
             Controls.Add(dtgVentas);
             Controls.Add(grpEmpleado);
             Controls.Add(btnCancelarVenta);
@@ -501,7 +518,6 @@
         private TextBox txtCantidad;
         private Label label3;
         private Button btnAgregar;
-        private Button btnModificar;
         private TextBox txtID;
         private Label label4;
         private Button btnEliminar;
@@ -534,5 +550,6 @@
         private DataGridViewTextBoxColumn dtcgTotal;
         private DataGridViewTextBoxColumn dtcDescuento;
         private DataGridViewTextBoxColumn dtgcEmpleado;
+        private Button btnModificar;
     }
 }

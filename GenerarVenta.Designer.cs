@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerarVenta));
             btnGenerarVenta = new Button();
             btnInventario = new Button();
             btnRegisProveedor = new Button();
@@ -37,57 +38,67 @@
             // 
             // btnGenerarVenta
             // 
-            btnGenerarVenta.Location = new Point(93, 85);
+            btnGenerarVenta.BackColor = Color.DodgerBlue;
+            btnGenerarVenta.BackgroundImage = (Image)resources.GetObject("btnGenerarVenta.BackgroundImage");
+            btnGenerarVenta.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnGenerarVenta.Location = new Point(100, 26);
             btnGenerarVenta.Name = "btnGenerarVenta";
-            btnGenerarVenta.Size = new Size(96, 62);
+            btnGenerarVenta.Size = new Size(133, 89);
             btnGenerarVenta.TabIndex = 0;
             btnGenerarVenta.Text = "Generar Venta";
-            btnGenerarVenta.UseVisualStyleBackColor = true;
-            btnGenerarVenta.Click += btnGenerarVenta_Click;
+            btnGenerarVenta.UseVisualStyleBackColor = false;
+            btnGenerarVenta.Click += btnGenerarVenta_Click_1;
             // 
             // btnInventario
             // 
-            btnInventario.Location = new Point(222, 85);
+            btnInventario.BackColor = Color.Aqua;
+            btnInventario.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnInventario.Location = new Point(86, 121);
             btnInventario.Name = "btnInventario";
-            btnInventario.Size = new Size(105, 62);
+            btnInventario.Size = new Size(147, 46);
             btnInventario.TabIndex = 1;
             btnInventario.Text = "Inventario";
-            btnInventario.UseVisualStyleBackColor = true;
-            btnInventario.Click += btnInventario_Click;
+            btnInventario.UseVisualStyleBackColor = false;
             // 
             // btnRegisProveedor
             // 
-            btnRegisProveedor.Location = new Point(351, 85);
+            btnRegisProveedor.BackColor = Color.SlateBlue;
+            btnRegisProveedor.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnRegisProveedor.Location = new Point(86, 173);
             btnRegisProveedor.Name = "btnRegisProveedor";
-            btnRegisProveedor.Size = new Size(103, 62);
+            btnRegisProveedor.Size = new Size(151, 91);
             btnRegisProveedor.TabIndex = 2;
             btnRegisProveedor.Text = "Registrar Proveedor";
-            btnRegisProveedor.UseVisualStyleBackColor = true;
-            btnRegisProveedor.Click += btnRegisProveedor_Click;
+            btnRegisProveedor.UseVisualStyleBackColor = false;
+            btnRegisProveedor.Click += btnRegisProveedor_Click_1;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(482, 85);
+            btnSalir.BackColor = Color.Red;
+            btnSalir.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnSalir.Location = new Point(100, 270);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(122, 62);
+            btnSalir.Size = new Size(133, 62);
             btnSalir.TabIndex = 3;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
             // lblBienvenido
             // 
             lblBienvenido.AutoSize = true;
+            lblBienvenido.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             lblBienvenido.Location = new Point(222, 26);
             lblBienvenido.Name = "lblBienvenido";
-            lblBienvenido.Size = new Size(0, 20);
+            lblBienvenido.Size = new Size(0, 29);
             lblBienvenido.TabIndex = 4;
             // 
             // GenerarVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(696, 169);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(318, 459);
             Controls.Add(lblBienvenido);
             Controls.Add(btnSalir);
             Controls.Add(btnRegisProveedor);
@@ -95,7 +106,6 @@
             Controls.Add(btnGenerarVenta);
             Name = "GenerarVenta";
             Text = "Inicio";
-            Load += GenerarVenta_Load;
             ResumeLayout(false);
             PerformLayout();
         }

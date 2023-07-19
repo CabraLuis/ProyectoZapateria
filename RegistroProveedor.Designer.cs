@@ -52,6 +52,7 @@
             // 
             // grpDatosProveedor
             // 
+            grpDatosProveedor.BackgroundImage = Properties.Resources.FondoTenis51;
             grpDatosProveedor.Controls.Add(btnSalir);
             grpDatosProveedor.Controls.Add(btnInicio);
             grpDatosProveedor.Controls.Add(btnAccion);
@@ -64,30 +65,36 @@
             grpDatosProveedor.Controls.Add(radEliminarProveedor);
             grpDatosProveedor.Controls.Add(radActualizarProveedor);
             grpDatosProveedor.Controls.Add(radAgregarProveedor);
+            grpDatosProveedor.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpDatosProveedor.ForeColor = Color.Lime;
             grpDatosProveedor.Location = new Point(12, 12);
             grpDatosProveedor.Name = "grpDatosProveedor";
-            grpDatosProveedor.Size = new Size(470, 316);
+            grpDatosProveedor.Size = new Size(595, 316);
             grpDatosProveedor.TabIndex = 0;
             grpDatosProveedor.TabStop = false;
             grpDatosProveedor.Text = "Datos Proveedores:";
             // 
             // btnSalir
             // 
+            btnSalir.BackColor = Color.Black;
             btnSalir.Location = new Point(260, 269);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 29);
             btnSalir.TabIndex = 7;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnInicio
             // 
+            btnInicio.BackColor = Color.Black;
             btnInicio.Location = new Point(22, 269);
             btnInicio.Name = "btnInicio";
             btnInicio.Size = new Size(94, 29);
             btnInicio.TabIndex = 6;
             btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = true;
+            btnInicio.UseVisualStyleBackColor = false;
+            btnInicio.Click += btnInicio_Click;
             // 
             // btnAccion
             // 
@@ -103,15 +110,16 @@
             // 
             txtDireccion.Location = new Point(124, 174);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(184, 27);
+            txtDireccion.Size = new Size(184, 30);
             txtDireccion.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Black;
             label3.Location = new Point(22, 177);
             label3.Name = "label3";
-            label3.Size = new Size(75, 20);
+            label3.Size = new Size(109, 25);
             label3.TabIndex = 1;
             label3.Text = "Direccion:";
             // 
@@ -119,15 +127,16 @@
             // 
             txtTelefono.Location = new Point(124, 131);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(125, 27);
+            txtTelefono.Size = new Size(125, 30);
             txtTelefono.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Black;
             label2.Location = new Point(22, 138);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(104, 25);
             label2.TabIndex = 3;
             label2.Text = "Telefono:";
             // 
@@ -135,15 +144,16 @@
             // 
             txtNombre.Location = new Point(124, 98);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(125, 27);
+            txtNombre.Size = new Size(125, 30);
             txtNombre.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Black;
             label1.Location = new Point(22, 105);
             label1.Name = "label1";
-            label1.Size = new Size(67, 20);
+            label1.Size = new Size(94, 25);
             label1.TabIndex = 2;
             label1.Text = "Nombre:";
             // 
@@ -151,39 +161,42 @@
             // 
             radEliminarProveedor.Appearance = Appearance.Button;
             radEliminarProveedor.AutoSize = true;
-            radEliminarProveedor.Location = new Point(314, 44);
+            radEliminarProveedor.BackColor = Color.Black;
+            radEliminarProveedor.Location = new Point(403, 44);
             radEliminarProveedor.Name = "radEliminarProveedor";
-            radEliminarProveedor.Size = new Size(145, 30);
+            radEliminarProveedor.Size = new Size(204, 35);
             radEliminarProveedor.TabIndex = 1;
             radEliminarProveedor.TabStop = true;
             radEliminarProveedor.Text = "Eliminar Proveedor";
-            radEliminarProveedor.UseVisualStyleBackColor = true;
+            radEliminarProveedor.UseVisualStyleBackColor = false;
             radEliminarProveedor.CheckedChanged += radEliminarProveedor_CheckedChanged;
             // 
             // radActualizarProveedor
             // 
             radActualizarProveedor.Appearance = Appearance.Button;
             radActualizarProveedor.AutoSize = true;
-            radActualizarProveedor.Location = new Point(157, 44);
+            radActualizarProveedor.BackColor = Color.Black;
+            radActualizarProveedor.Location = new Point(204, 44);
             radActualizarProveedor.Name = "radActualizarProveedor";
-            radActualizarProveedor.Size = new Size(151, 30);
+            radActualizarProveedor.Size = new Size(209, 35);
             radActualizarProveedor.TabIndex = 1;
             radActualizarProveedor.Text = "ModificarProveedor";
-            radActualizarProveedor.UseVisualStyleBackColor = true;
+            radActualizarProveedor.UseVisualStyleBackColor = false;
             radActualizarProveedor.CheckedChanged += radActualizarProveedor_CheckedChanged;
             // 
             // radAgregarProveedor
             // 
             radAgregarProveedor.Appearance = Appearance.Button;
             radAgregarProveedor.AutoSize = true;
+            radAgregarProveedor.BackColor = SystemColors.ActiveCaptionText;
             radAgregarProveedor.Checked = true;
             radAgregarProveedor.Location = new Point(6, 44);
             radAgregarProveedor.Name = "radAgregarProveedor";
-            radAgregarProveedor.Size = new Size(145, 30);
+            radAgregarProveedor.Size = new Size(204, 35);
             radAgregarProveedor.TabIndex = 1;
             radAgregarProveedor.TabStop = true;
             radAgregarProveedor.Text = "Agregar Proveedor";
-            radAgregarProveedor.UseVisualStyleBackColor = true;
+            radAgregarProveedor.UseVisualStyleBackColor = false;
             radAgregarProveedor.CheckedChanged += radAgregarProveedor_CheckedChanged;
             // 
             // dtgDatosProveedores
@@ -192,7 +205,7 @@
             dtgDatosProveedores.AllowUserToDeleteRows = false;
             dtgDatosProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgDatosProveedores.Columns.AddRange(new DataGridViewColumn[] { dtgcID, dtgcNombre, dtgcTelefono, dtgcDireccion });
-            dtgDatosProveedores.Location = new Point(500, 12);
+            dtgDatosProveedores.Location = new Point(613, 12);
             dtgDatosProveedores.Name = "dtgDatosProveedores";
             dtgDatosProveedores.ReadOnly = true;
             dtgDatosProveedores.RowHeadersWidth = 51;
@@ -236,7 +249,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1087, 331);
+            BackgroundImage = Properties.Resources.FondoTenis52;
+            ClientSize = new Size(1191, 331);
             Controls.Add(dtgDatosProveedores);
             Controls.Add(grpDatosProveedor);
             Name = "RegistroProveedor";
