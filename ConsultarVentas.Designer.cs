@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             grpConsultaVentas = new GroupBox();
-            label1 = new Label();
-            dtpFechaInicio = new DateTimePicker();
-            label2 = new Label();
-            dtmFechaFinal = new DateTimePicker();
             btnConsultar = new Button();
+            dtmFechaFinal = new DateTimePicker();
+            label2 = new Label();
+            dtpFechaInicio = new DateTimePicker();
+            label1 = new Label();
             dataGridView1 = new DataGridView();
             dtgcIDVenta = new DataGridViewTextBoxColumn();
             dtgcFecha = new DataGridViewTextBoxColumn();
@@ -41,12 +41,14 @@
             dtgcTotal = new DataGridViewTextBoxColumn();
             dtgcEmpleado = new DataGridViewTextBoxColumn();
             dtgcCantidad = new DataGridViewTextBoxColumn();
+            btnRegresar = new Button();
             grpConsultaVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // grpConsultaVentas
             // 
+            grpConsultaVentas.Controls.Add(btnRegresar);
             grpConsultaVentas.Controls.Add(btnConsultar);
             grpConsultaVentas.Controls.Add(dtmFechaFinal);
             grpConsultaVentas.Controls.Add(label2);
@@ -59,21 +61,21 @@
             grpConsultaVentas.TabStop = false;
             grpConsultaVentas.Text = "Datos Consulta:";
             // 
-            // label1
+            // btnConsultar
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 45);
-            label1.Name = "label1";
-            label1.Size = new Size(93, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Fecha Inicial:";
+            btnConsultar.Location = new Point(6, 135);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(94, 29);
+            btnConsultar.TabIndex = 3;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
             // 
-            // dtpFechaInicio
+            // dtmFechaFinal
             // 
-            dtpFechaInicio.Location = new Point(105, 40);
-            dtpFechaInicio.Name = "dtpFechaInicio";
-            dtpFechaInicio.Size = new Size(250, 27);
-            dtpFechaInicio.TabIndex = 1;
+            dtmFechaFinal.Location = new Point(105, 90);
+            dtmFechaFinal.Name = "dtmFechaFinal";
+            dtmFechaFinal.Size = new Size(250, 27);
+            dtmFechaFinal.TabIndex = 1;
             // 
             // label2
             // 
@@ -84,21 +86,21 @@
             label2.TabIndex = 2;
             label2.Text = "Fecha Final:";
             // 
-            // dtmFechaFinal
+            // dtpFechaInicio
             // 
-            dtmFechaFinal.Location = new Point(105, 90);
-            dtmFechaFinal.Name = "dtmFechaFinal";
-            dtmFechaFinal.Size = new Size(250, 27);
-            dtmFechaFinal.TabIndex = 1;
+            dtpFechaInicio.Location = new Point(105, 40);
+            dtpFechaInicio.Name = "dtpFechaInicio";
+            dtpFechaInicio.Size = new Size(250, 27);
+            dtpFechaInicio.TabIndex = 1;
             // 
-            // btnConsultar
+            // label1
             // 
-            btnConsultar.Location = new Point(105, 141);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(94, 29);
-            btnConsultar.TabIndex = 3;
-            btnConsultar.Text = "Consultar";
-            btnConsultar.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 45);
+            label1.Name = "label1";
+            label1.Size = new Size(93, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Fecha Inicial:";
             // 
             // dataGridView1
             // 
@@ -162,6 +164,16 @@
             dtgcCantidad.ReadOnly = true;
             dtgcCantidad.Width = 125;
             // 
+            // btnRegresar
+            // 
+            btnRegresar.Location = new Point(261, 135);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(94, 29);
+            btnRegresar.TabIndex = 4;
+            btnRegresar.Text = "Regresar";
+            btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
+            // 
             // ConsultarVentas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -192,5 +204,6 @@
         private DataGridViewTextBoxColumn dtgcTotal;
         private DataGridViewTextBoxColumn dtgcEmpleado;
         private DataGridViewTextBoxColumn dtgcCantidad;
+        private Button btnRegresar;
     }
 }

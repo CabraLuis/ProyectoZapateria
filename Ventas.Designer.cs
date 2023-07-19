@@ -30,35 +30,35 @@
         {
             Label lblHoraActual;
             grpDatosCalzado = new GroupBox();
-            label1 = new Label();
-            cmbBusqueda = new ComboBox();
-            label2 = new Label();
-            txtCantidad = new TextBox();
-            label3 = new Label();
-            txtTalla = new TextBox();
-            label4 = new Label();
-            txtID = new TextBox();
-            btnModificar = new Button();
-            btnAgregar = new Button();
-            btnBuscar = new Button();
             btnEliminar = new Button();
+            btnBuscar = new Button();
+            btnAgregar = new Button();
+            btnModificar = new Button();
+            txtTalla = new TextBox();
+            txtID = new TextBox();
+            txtCantidad = new TextBox();
+            cmbBusqueda = new ComboBox();
+            label3 = new Label();
+            label4 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             grpDatosCliente = new GroupBox();
-            label5 = new Label();
-            txtNombreCliente = new TextBox();
-            label6 = new Label();
-            txtTelefono = new TextBox();
-            label7 = new Label();
-            txtApellido = new TextBox();
-            label8 = new Label();
             txtDireccion = new TextBox();
+            label8 = new Label();
+            txtApellido = new TextBox();
+            label7 = new Label();
+            txtTelefono = new TextBox();
+            label6 = new Label();
+            txtNombreCliente = new TextBox();
+            label5 = new Label();
             btnRealizarVenta = new Button();
             btnCancelarVenta = new Button();
             grpEmpleado = new GroupBox();
-            label9 = new Label();
-            cmbEmpleados = new ComboBox();
-            label10 = new Label();
-            lblFechaActual = new Label();
             label11 = new Label();
+            lblFechaActual = new Label();
+            label10 = new Label();
+            cmbEmpleados = new ComboBox();
+            label9 = new Label();
             dtgVentas = new DataGridView();
             dtgcIDVenta = new DataGridViewTextBoxColumn();
             dtgcIDZapato = new DataGridViewTextBoxColumn();
@@ -76,6 +76,16 @@
             grpEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgVentas).BeginInit();
             SuspendLayout();
+            // 
+            // lblHoraActual
+            // 
+            lblHoraActual.AutoSize = true;
+            lblHoraActual.BackColor = SystemColors.Info;
+            lblHoraActual.BorderStyle = BorderStyle.Fixed3D;
+            lblHoraActual.Location = new Point(896, 34);
+            lblHoraActual.Name = "lblHoraActual";
+            lblHoraActual.Size = new Size(2, 22);
+            lblHoraActual.TabIndex = 5;
             // 
             // grpDatosCalzado
             // 
@@ -98,79 +108,23 @@
             grpDatosCalzado.TabStop = false;
             grpDatosCalzado.Text = "Datos Calzado:";
             // 
-            // label1
+            // btnEliminar
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(19, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(82, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Buscar por:";
+            btnEliminar.Location = new Point(7, 281);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(268, 29);
+            btnEliminar.TabIndex = 2;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // cmbBusqueda
+            // btnBuscar
             // 
-            cmbBusqueda.FormattingEnabled = true;
-            cmbBusqueda.Location = new Point(124, 26);
-            cmbBusqueda.Name = "cmbBusqueda";
-            cmbBusqueda.Size = new Size(151, 28);
-            cmbBusqueda.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(19, 101);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Cantidad:";
-            // 
-            // txtCantidad
-            // 
-            txtCantidad.Location = new Point(124, 101);
-            txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(151, 27);
-            txtCantidad.TabIndex = 1;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(19, 137);
-            label3.Name = "label3";
-            label3.Size = new Size(42, 20);
-            label3.TabIndex = 1;
-            label3.Text = "Talla:";
-            // 
-            // txtTalla
-            // 
-            txtTalla.Location = new Point(124, 134);
-            txtTalla.Name = "txtTalla";
-            txtTalla.Size = new Size(151, 27);
-            txtTalla.TabIndex = 1;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(16, 72);
-            label4.Name = "label4";
-            label4.Size = new Size(93, 20);
-            label4.TabIndex = 1;
-            label4.Text = "ID o Codigo:";
-            // 
-            // txtID
-            // 
-            txtID.Location = new Point(124, 68);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(151, 27);
-            txtID.TabIndex = 1;
-            // 
-            // btnModificar
-            // 
-            btnModificar.Location = new Point(7, 176);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(268, 29);
-            btnModificar.TabIndex = 1;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
+            btnBuscar.Location = new Point(7, 246);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(268, 29);
+            btnBuscar.TabIndex = 1;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
@@ -182,23 +136,79 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // btnBuscar
+            // btnModificar
             // 
-            btnBuscar.Location = new Point(7, 246);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(268, 29);
-            btnBuscar.TabIndex = 1;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
+            btnModificar.Location = new Point(7, 176);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(268, 29);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
             // 
-            // btnEliminar
+            // txtTalla
             // 
-            btnEliminar.Location = new Point(7, 281);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(268, 29);
-            btnEliminar.TabIndex = 2;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
+            txtTalla.Location = new Point(124, 134);
+            txtTalla.Name = "txtTalla";
+            txtTalla.Size = new Size(151, 27);
+            txtTalla.TabIndex = 1;
+            // 
+            // txtID
+            // 
+            txtID.Location = new Point(124, 68);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(151, 27);
+            txtID.TabIndex = 1;
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(124, 101);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(151, 27);
+            txtCantidad.TabIndex = 1;
+            // 
+            // cmbBusqueda
+            // 
+            cmbBusqueda.FormattingEnabled = true;
+            cmbBusqueda.Location = new Point(124, 26);
+            cmbBusqueda.Name = "cmbBusqueda";
+            cmbBusqueda.Size = new Size(151, 28);
+            cmbBusqueda.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(19, 137);
+            label3.Name = "label3";
+            label3.Size = new Size(42, 20);
+            label3.TabIndex = 1;
+            label3.Text = "Talla:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(16, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(93, 20);
+            label4.TabIndex = 1;
+            label4.Text = "ID o Codigo:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(19, 101);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Cantidad:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(82, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Buscar por:";
             // 
             // grpDatosCliente
             // 
@@ -217,53 +227,12 @@
             grpDatosCliente.TabStop = false;
             grpDatosCliente.Text = "Datos del cliente:";
             // 
-            // label5
+            // txtDireccion
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(7, 50);
-            label5.Name = "label5";
-            label5.Size = new Size(67, 20);
-            label5.TabIndex = 2;
-            label5.Text = "Nombre:";
-            // 
-            // txtNombreCliente
-            // 
-            txtNombreCliente.Location = new Point(110, 43);
-            txtNombreCliente.Name = "txtNombreCliente";
-            txtNombreCliente.Size = new Size(125, 27);
-            txtNombreCliente.TabIndex = 2;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(7, 96);
-            label6.Name = "label6";
-            label6.Size = new Size(70, 20);
-            label6.TabIndex = 2;
-            label6.Text = "Telefono:";
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.Location = new Point(110, 89);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(125, 27);
-            txtTelefono.TabIndex = 2;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(7, 142);
-            label7.Name = "label7";
-            label7.Size = new Size(69, 20);
-            label7.TabIndex = 2;
-            label7.Text = "Apellido:";
-            // 
-            // txtApellido
-            // 
-            txtApellido.Location = new Point(110, 139);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(125, 27);
-            txtApellido.TabIndex = 2;
+            txtDireccion.Location = new Point(110, 176);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(172, 27);
+            txtDireccion.TabIndex = 2;
             // 
             // label8
             // 
@@ -274,12 +243,53 @@
             label8.TabIndex = 2;
             label8.Text = "Direccion";
             // 
-            // txtDireccion
+            // txtApellido
             // 
-            txtDireccion.Location = new Point(110, 176);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(172, 27);
-            txtDireccion.TabIndex = 2;
+            txtApellido.Location = new Point(110, 139);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(125, 27);
+            txtApellido.TabIndex = 2;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(7, 142);
+            label7.Name = "label7";
+            label7.Size = new Size(69, 20);
+            label7.TabIndex = 2;
+            label7.Text = "Apellido:";
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Location = new Point(110, 89);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(125, 27);
+            txtTelefono.TabIndex = 2;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(7, 96);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 20);
+            label6.TabIndex = 2;
+            label6.Text = "Telefono:";
+            // 
+            // txtNombreCliente
+            // 
+            txtNombreCliente.Location = new Point(110, 43);
+            txtNombreCliente.Name = "txtNombreCliente";
+            txtNombreCliente.Size = new Size(125, 27);
+            txtNombreCliente.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(7, 50);
+            label5.Name = "label5";
+            label5.Size = new Size(67, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Nombre:";
             // 
             // btnRealizarVenta
             // 
@@ -298,6 +308,7 @@
             btnCancelarVenta.TabIndex = 3;
             btnCancelarVenta.Text = "Cancelar Venta";
             btnCancelarVenta.UseVisualStyleBackColor = true;
+            btnCancelarVenta.Click += btnCancelarVenta_Click;
             // 
             // grpEmpleado
             // 
@@ -318,32 +329,14 @@
             grpEmpleado.Text = "Identificacion:";
             grpEmpleado.Enter += groupBox1_Enter;
             // 
-            // label9
+            // label11
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(329, 34);
-            label9.Name = "label9";
-            label9.Size = new Size(80, 20);
-            label9.TabIndex = 0;
-            label9.Text = "Empleado:";
-            // 
-            // cmbEmpleados
-            // 
-            cmbEmpleados.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEmpleados.FormattingEnabled = true;
-            cmbEmpleados.Location = new Point(415, 29);
-            cmbEmpleados.Name = "cmbEmpleados";
-            cmbEmpleados.Size = new Size(151, 28);
-            cmbEmpleados.TabIndex = 1;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(589, 34);
-            label10.Name = "label10";
-            label10.Size = new Size(96, 20);
-            label10.TabIndex = 2;
-            label10.Text = "Fecha Actual:";
+            label11.AutoSize = true;
+            label11.Location = new Point(789, 34);
+            label11.Name = "label11";
+            label11.Size = new Size(91, 20);
+            label11.TabIndex = 4;
+            label11.Text = "Hora Actual:";
             // 
             // lblFechaActual
             // 
@@ -354,24 +347,32 @@
             lblFechaActual.Size = new Size(2, 22);
             lblFechaActual.TabIndex = 3;
             // 
-            // label11
+            // label10
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(789, 34);
-            label11.Name = "label11";
-            label11.Size = new Size(91, 20);
-            label11.TabIndex = 4;
-            label11.Text = "Hora Actual:";
+            label10.AutoSize = true;
+            label10.Location = new Point(589, 34);
+            label10.Name = "label10";
+            label10.Size = new Size(96, 20);
+            label10.TabIndex = 2;
+            label10.Text = "Fecha Actual:";
             // 
-            // lblHoraActual
+            // cmbEmpleados
             // 
-            lblHoraActual.AutoSize = true;
-            lblHoraActual.BackColor = SystemColors.Info;
-            lblHoraActual.BorderStyle = BorderStyle.Fixed3D;
-            lblHoraActual.Location = new Point(896, 34);
-            lblHoraActual.Name = "lblHoraActual";
-            lblHoraActual.Size = new Size(2, 22);
-            lblHoraActual.TabIndex = 5;
+            cmbEmpleados.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEmpleados.FormattingEnabled = true;
+            cmbEmpleados.Location = new Point(415, 29);
+            cmbEmpleados.Name = "cmbEmpleados";
+            cmbEmpleados.Size = new Size(151, 28);
+            cmbEmpleados.TabIndex = 1;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(329, 34);
+            label9.Name = "label9";
+            label9.Size = new Size(80, 20);
+            label9.TabIndex = 0;
+            label9.Text = "Empleado:";
             // 
             // dtgVentas
             // 
@@ -471,7 +472,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1647, 654);
+            ClientSize = new Size(1647, 653);
             Controls.Add(dtgVentas);
             Controls.Add(grpEmpleado);
             Controls.Add(btnCancelarVenta);
