@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             grpDatosZapato = new GroupBox();
+            btnBuscar = new Button();
             btnAccion = new Button();
             cmbProveedores = new ComboBox();
             txtPrecio = new TextBox();
@@ -50,7 +51,7 @@
             label1 = new Label();
             radActualizar = new RadioButton();
             radAgregar = new RadioButton();
-            dataGridView1 = new DataGridView();
+            dtgDatosZapatos = new DataGridView();
             dtgcID = new DataGridViewTextBoxColumn();
             dtgcTipoCalzado = new DataGridViewTextBoxColumn();
             dtgcTalla = new DataGridViewTextBoxColumn();
@@ -61,13 +62,14 @@
             dtgcPrecio = new DataGridViewTextBoxColumn();
             dtgcProveedor = new DataGridViewTextBoxColumn();
             grpDatosZapato.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgDatosZapatos).BeginInit();
             SuspendLayout();
             // 
             // grpDatosZapato
             // 
             grpDatosZapato.BackColor = Color.Black;
             grpDatosZapato.BackgroundImage = Properties.Resources.FondoTenis4;
+            grpDatosZapato.Controls.Add(btnBuscar);
             grpDatosZapato.Controls.Add(btnAccion);
             grpDatosZapato.Controls.Add(cmbProveedores);
             grpDatosZapato.Controls.Add(txtPrecio);
@@ -91,12 +93,23 @@
             grpDatosZapato.Controls.Add(radAgregar);
             grpDatosZapato.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             grpDatosZapato.ForeColor = Color.Yellow;
-            grpDatosZapato.Location = new Point(12, 12);
+            grpDatosZapato.Location = new Point(4, 12);
             grpDatosZapato.Name = "grpDatosZapato";
-            grpDatosZapato.Size = new Size(423, 426);
+            grpDatosZapato.Size = new Size(463, 426);
             grpDatosZapato.TabIndex = 0;
             grpDatosZapato.TabStop = false;
             grpDatosZapato.Text = "Datos del producto:";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.ForeColor = Color.Black;
+            btnBuscar.Location = new Point(293, 390);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(94, 29);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnAccion
             // 
@@ -105,12 +118,13 @@
             btnAccion.Size = new Size(115, 29);
             btnAccion.TabIndex = 1;
             btnAccion.UseVisualStyleBackColor = true;
+            btnAccion.Click += btnAccion_Click;
             // 
             // cmbProveedores
             // 
             cmbProveedores.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbProveedores.FormattingEnabled = true;
-            cmbProveedores.Location = new Point(196, 356);
+            cmbProveedores.Location = new Point(196, 353);
             cmbProveedores.Name = "cmbProveedores";
             cmbProveedores.Size = new Size(146, 33);
             cmbProveedores.TabIndex = 1;
@@ -263,6 +277,7 @@
             radActualizar.TabIndex = 1;
             radActualizar.Text = "Actualizar Calzado:";
             radActualizar.UseVisualStyleBackColor = false;
+            radActualizar.CheckedChanged += radActualizar_CheckedChanged;
             // 
             // radAgregar
             // 
@@ -277,20 +292,21 @@
             radAgregar.TabStop = true;
             radAgregar.Text = "Agregar Nuevo Producto";
             radAgregar.UseVisualStyleBackColor = false;
+            radAgregar.CheckedChanged += radAgregar_CheckedChanged;
             // 
-            // dataGridView1
+            // dtgDatosZapatos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dtgcID, dtgcTipoCalzado, dtgcTalla, dtgcMarca, dtgcModelo, dtgcStock, dtgcColor, dtgcPrecio, dtgcProveedor });
-            dataGridView1.Location = new Point(441, 23);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1185, 415);
-            dataGridView1.TabIndex = 1;
+            dtgDatosZapatos.AllowUserToAddRows = false;
+            dtgDatosZapatos.AllowUserToDeleteRows = false;
+            dtgDatosZapatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgDatosZapatos.Columns.AddRange(new DataGridViewColumn[] { dtgcID, dtgcTipoCalzado, dtgcTalla, dtgcMarca, dtgcModelo, dtgcStock, dtgcColor, dtgcPrecio, dtgcProveedor });
+            dtgDatosZapatos.Location = new Point(473, 23);
+            dtgDatosZapatos.Name = "dtgDatosZapatos";
+            dtgDatosZapatos.ReadOnly = true;
+            dtgDatosZapatos.RowHeadersWidth = 51;
+            dtgDatosZapatos.RowTemplate.Height = 29;
+            dtgDatosZapatos.Size = new Size(1185, 415);
+            dtgDatosZapatos.TabIndex = 1;
             // 
             // dtgcID
             // 
@@ -370,13 +386,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.FondoTenis4;
             ClientSize = new Size(1661, 458);
-            Controls.Add(dataGridView1);
+            Controls.Add(dtgDatosZapatos);
             Controls.Add(grpDatosZapato);
             Name = "Inventario";
             Text = "Inventario";
+            Load += Inventario_Load;
             grpDatosZapato.ResumeLayout(false);
             grpDatosZapato.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgDatosZapatos).EndInit();
             ResumeLayout(false);
         }
 
@@ -404,7 +421,7 @@
         private Label label8;
         private Label label9;
         private Button btnAccion;
-        private DataGridView dataGridView1;
+        private DataGridView dtgDatosZapatos;
         private DataGridViewTextBoxColumn dtgcID;
         private DataGridViewTextBoxColumn dtgcTipoCalzado;
         private DataGridViewTextBoxColumn dtgcTalla;
@@ -414,5 +431,6 @@
         private DataGridViewTextBoxColumn dtgcColor;
         private DataGridViewTextBoxColumn dtgcPrecio;
         private DataGridViewTextBoxColumn dtgcProveedor;
+        private Button btnBuscar;
     }
 }
