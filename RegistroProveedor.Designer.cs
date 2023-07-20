@@ -46,6 +46,7 @@
             dtgcNombre = new DataGridViewTextBoxColumn();
             dtgcTelefono = new DataGridViewTextBoxColumn();
             dtgcDireccion = new DataGridViewTextBoxColumn();
+            btnBuscar = new Button();
             grpDatosProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatosProveedores).BeginInit();
             SuspendLayout();
@@ -53,6 +54,7 @@
             // grpDatosProveedor
             // 
             grpDatosProveedor.BackgroundImage = Properties.Resources.FondoTenis51;
+            grpDatosProveedor.Controls.Add(btnBuscar);
             grpDatosProveedor.Controls.Add(btnSalir);
             grpDatosProveedor.Controls.Add(btnInicio);
             grpDatosProveedor.Controls.Add(btnAccion);
@@ -99,7 +101,7 @@
             // btnAccion
             // 
             btnAccion.FlatStyle = FlatStyle.Popup;
-            btnAccion.Location = new Point(95, 207);
+            btnAccion.Location = new Point(6, 213);
             btnAccion.Name = "btnAccion";
             btnAccion.Size = new Size(213, 35);
             btnAccion.TabIndex = 5;
@@ -245,6 +247,15 @@
             dtgcDireccion.ReadOnly = true;
             dtgcDireccion.Width = 125;
             // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(333, 213);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(94, 29);
+            btnBuscar.TabIndex = 8;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // RegistroProveedor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -282,5 +293,6 @@
         private DataGridViewTextBoxColumn dtgcDireccion;
         private Button btnSalir;
         private Button btnInicio;
+        private Button btnBuscar;
     }
 }

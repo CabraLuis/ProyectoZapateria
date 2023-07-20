@@ -59,6 +59,7 @@
             btnInventario.TabIndex = 1;
             btnInventario.Text = "Inventario";
             btnInventario.UseVisualStyleBackColor = false;
+            btnInventario.Click += btnInventario_Click_1;
             // 
             // btnRegisProveedor
             // 
@@ -106,6 +107,7 @@
             Controls.Add(btnGenerarVenta);
             Name = "GenerarVenta";
             Text = "Inicio";
+            Load += GenerarVenta_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }

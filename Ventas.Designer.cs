@@ -32,6 +32,7 @@
             grpDatosCalzado = new GroupBox();
             btnEliminar = new Button();
             btnBuscar = new Button();
+            btnModificar = new Button();
             btnAgregar = new Button();
             txtTalla = new TextBox();
             txtID = new TextBox();
@@ -59,17 +60,6 @@
             cmbEmpleados = new ComboBox();
             label9 = new Label();
             dtgVentas = new DataGridView();
-            dtgcIDVenta = new DataGridViewTextBoxColumn();
-            dtgcIDZapato = new DataGridViewTextBoxColumn();
-            dtgcTipoCalzado = new DataGridViewTextBoxColumn();
-            dtgcTalla = new DataGridViewTextBoxColumn();
-            dtcNombreCliente = new DataGridViewTextBoxColumn();
-            dtgcCantidad = new DataGridViewTextBoxColumn();
-            dtgcSubtotal = new DataGridViewTextBoxColumn();
-            dtcgTotal = new DataGridViewTextBoxColumn();
-            dtcDescuento = new DataGridViewTextBoxColumn();
-            dtgcEmpleado = new DataGridViewTextBoxColumn();
-            btnModificar = new Button();
             lblHoraActual = new Label();
             grpDatosCalzado.SuspendLayout();
             grpDatosCliente.SuspendLayout();
@@ -128,6 +118,15 @@
             btnBuscar.TabIndex = 1;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(7, 176);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(268, 29);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
@@ -386,7 +385,6 @@
             dtgVentas.AllowUserToDeleteRows = false;
             dtgVentas.BorderStyle = BorderStyle.Fixed3D;
             dtgVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgVentas.Columns.AddRange(new DataGridViewColumn[] { dtgcIDVenta, dtgcIDZapato, dtgcTipoCalzado, dtgcTalla, dtcNombreCliente, dtgcCantidad, dtgcSubtotal, dtcgTotal, dtcDescuento, dtgcEmpleado });
             dtgVentas.Location = new Point(318, 99);
             dtgVentas.Name = "dtgVentas";
             dtgVentas.ReadOnly = true;
@@ -394,95 +392,6 @@
             dtgVentas.RowTemplate.Height = 29;
             dtgVentas.Size = new Size(1311, 544);
             dtgVentas.TabIndex = 5;
-            // 
-            // dtgcIDVenta
-            // 
-            dtgcIDVenta.HeaderText = "Num.Venta";
-            dtgcIDVenta.MinimumWidth = 6;
-            dtgcIDVenta.Name = "dtgcIDVenta";
-            dtgcIDVenta.ReadOnly = true;
-            dtgcIDVenta.Width = 125;
-            // 
-            // dtgcIDZapato
-            // 
-            dtgcIDZapato.HeaderText = "IDZapato";
-            dtgcIDZapato.MinimumWidth = 6;
-            dtgcIDZapato.Name = "dtgcIDZapato";
-            dtgcIDZapato.ReadOnly = true;
-            dtgcIDZapato.Width = 125;
-            // 
-            // dtgcTipoCalzado
-            // 
-            dtgcTipoCalzado.HeaderText = "TipoCalzado";
-            dtgcTipoCalzado.MinimumWidth = 6;
-            dtgcTipoCalzado.Name = "dtgcTipoCalzado";
-            dtgcTipoCalzado.ReadOnly = true;
-            dtgcTipoCalzado.Width = 125;
-            // 
-            // dtgcTalla
-            // 
-            dtgcTalla.HeaderText = "Talla";
-            dtgcTalla.MinimumWidth = 6;
-            dtgcTalla.Name = "dtgcTalla";
-            dtgcTalla.ReadOnly = true;
-            dtgcTalla.Width = 125;
-            // 
-            // dtcNombreCliente
-            // 
-            dtcNombreCliente.HeaderText = "NombreCliente";
-            dtcNombreCliente.MinimumWidth = 6;
-            dtcNombreCliente.Name = "dtcNombreCliente";
-            dtcNombreCliente.ReadOnly = true;
-            dtcNombreCliente.Width = 125;
-            // 
-            // dtgcCantidad
-            // 
-            dtgcCantidad.HeaderText = "Cantidad";
-            dtgcCantidad.MinimumWidth = 6;
-            dtgcCantidad.Name = "dtgcCantidad";
-            dtgcCantidad.ReadOnly = true;
-            dtgcCantidad.Width = 125;
-            // 
-            // dtgcSubtotal
-            // 
-            dtgcSubtotal.HeaderText = "Subtotal";
-            dtgcSubtotal.MinimumWidth = 6;
-            dtgcSubtotal.Name = "dtgcSubtotal";
-            dtgcSubtotal.ReadOnly = true;
-            dtgcSubtotal.Width = 125;
-            // 
-            // dtcgTotal
-            // 
-            dtcgTotal.HeaderText = "Total";
-            dtcgTotal.MinimumWidth = 6;
-            dtcgTotal.Name = "dtcgTotal";
-            dtcgTotal.ReadOnly = true;
-            dtcgTotal.Width = 125;
-            // 
-            // dtcDescuento
-            // 
-            dtcDescuento.HeaderText = "Descuento";
-            dtcDescuento.MinimumWidth = 6;
-            dtcDescuento.Name = "dtcDescuento";
-            dtcDescuento.ReadOnly = true;
-            dtcDescuento.Width = 125;
-            // 
-            // dtgcEmpleado
-            // 
-            dtgcEmpleado.HeaderText = "Atendio";
-            dtgcEmpleado.MinimumWidth = 6;
-            dtgcEmpleado.Name = "dtgcEmpleado";
-            dtgcEmpleado.ReadOnly = true;
-            dtgcEmpleado.Width = 125;
-            // 
-            // btnModificar
-            // 
-            btnModificar.Location = new Point(7, 176);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(268, 29);
-            btnModificar.TabIndex = 1;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
             // 
             // Ventas
             // 
@@ -498,6 +407,7 @@
             Controls.Add(grpDatosCalzado);
             Name = "Ventas";
             Text = "Ventas";
+            Load += Ventas_Load;
             grpDatosCalzado.ResumeLayout(false);
             grpDatosCalzado.PerformLayout();
             grpDatosCliente.ResumeLayout(false);
@@ -540,16 +450,6 @@
         private ComboBox cmbEmpleados;
         private Label label9;
         private DataGridView dtgVentas;
-        private DataGridViewTextBoxColumn dtgcIDVenta;
-        private DataGridViewTextBoxColumn dtgcIDZapato;
-        private DataGridViewTextBoxColumn dtgcTipoCalzado;
-        private DataGridViewTextBoxColumn dtgcTalla;
-        private DataGridViewTextBoxColumn dtcNombreCliente;
-        private DataGridViewTextBoxColumn dtgcCantidad;
-        private DataGridViewTextBoxColumn dtgcSubtotal;
-        private DataGridViewTextBoxColumn dtcgTotal;
-        private DataGridViewTextBoxColumn dtcDescuento;
-        private DataGridViewTextBoxColumn dtgcEmpleado;
         private Button btnModificar;
     }
 }

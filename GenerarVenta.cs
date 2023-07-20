@@ -14,13 +14,16 @@ namespace ProyectoZapateria
     {
         public string ay;
         public string mensajeBienvenida;
-        public GenerarVenta(object a)
+        public string usuario;
+        public GenerarVenta(object a,string User)
         {
 
             InitializeComponent();
             ay = a.ToString();
+            usuario = User;
+
         }
-        public GenerarVenta() { InitializeComponent(); }
+        public GenerarVenta(string user) { InitializeComponent();  usuario = user; }
 
         private void GenerarVenta_Load(object sender, EventArgs e)
         {
@@ -52,14 +55,17 @@ namespace ProyectoZapateria
 
         private void btnGenerarVenta_Click(object sender, EventArgs e)
         {
-            Ventas Ventas1 = new Ventas();
-            Ventas1.Show();
-            this.Hide();
+           
+                Ventas Ventas1 = new Ventas(usuario);
+                Ventas1.Show();
+                this.Hide();
+           
+            
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            Inventario inventario = new Inventario();
+            Inventario inventario = new Inventario(usuario);
             inventario.Show();
             this.Hide();
         }
@@ -71,21 +77,49 @@ namespace ProyectoZapateria
 
         private void btnGenerarVenta_Click_1(object sender, EventArgs e)
         {
-            Ventas ControlVentas = new Ventas();
+            Ventas ControlVentas = new Ventas(usuario);
             ControlVentas.Show();
             this.Hide();
         }
 
         private void btnRegisProveedor_Click_1(object sender, EventArgs e)
         {
-            RegistroProveedor proveedor = new RegistroProveedor();
+            if (usuario == "Administrador")
+            {
+                 RegistroProveedor proveedor = new RegistroProveedor(usuario);
             proveedor.Show();
             this.Hide();
+            }
+            else if (usuario == "Empleado")
+            {
+                MessageBox.Show("No tienes los permisos necesarios para entrar al apartado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+           
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnInventario_Click_1(object sender, EventArgs e)
+        {
+            if (usuario == "Administrador")
+            {
+                Inventario inventario = new Inventario(usuario);
+                inventario.Show();
+                this.Hide();
+            }
+            else if (usuario == "Empleado")
+            {
+                MessageBox.Show("No tienes los permisos necesarios para entrar al apartado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
+
+        private void GenerarVenta_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
