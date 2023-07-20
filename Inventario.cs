@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoZapateria
@@ -132,7 +132,7 @@ namespace ProyectoZapateria
                                 string Precio = reader["Precio"].ToString();
                                 txtID.Text = id;
                                 txtTipoCalzado.Text = Tipo;
-                                cmbProveedores.Text = ;
+                                
                             }
                             else
                             {

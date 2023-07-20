@@ -37,7 +37,7 @@ namespace ProyectoZapateria
   
 
       
-                string connectionString = "Data Source=tu_servidor;Initial Catalog=nombre_basededatos;User ID=nombre_login;Password=tu_contraseña;";
+                string connectionString = "server=LAPTOP-I1BSF5OM\\SQLEXPRESS;Initial Catalog=zapateria;User ID=josePerez;Password=12345;";
 
                 // Reemplaza los valores adecuados en la cadena de conexión
 

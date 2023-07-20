@@ -44,7 +44,7 @@ namespace ProyectoZapateria
             else if (radAgregarProveedor.Checked)
             {
                 SqlCommand command = new SqlCommand(consulta, connection);
-                command.Parameters.AddWithValue("@IdProveedor", nombreUsuario);
+                command.Parameters.AddWithValue("@IdProveedor", txtNombre.Tag);
                 command.Parameters.AddWithValue("@nombre", Nombre);
                 command.Parameters.AddWithValue("@telefono", Telefono);
             }
