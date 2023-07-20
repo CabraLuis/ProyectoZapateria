@@ -72,7 +72,7 @@
             lblHoraActual.AutoSize = true;
             lblHoraActual.BackColor = SystemColors.Info;
             lblHoraActual.BorderStyle = BorderStyle.Fixed3D;
-            lblHoraActual.Location = new Point(896, 34);
+            lblHoraActual.Location = new Point(971, 29);
             lblHoraActual.Name = "lblHoraActual";
             lblHoraActual.Size = new Size(2, 27);
             lblHoraActual.TabIndex = 5;
@@ -109,6 +109,7 @@
             btnEliminar.TabIndex = 2;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Visible = false;
             // 
             // btnBuscar
             // 
@@ -118,6 +119,8 @@
             btnBuscar.TabIndex = 1;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Visible = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnModificar
             // 
@@ -127,6 +130,7 @@
             btnModificar.TabIndex = 1;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Visible = false;
             // 
             // btnAgregar
             // 
@@ -136,6 +140,7 @@
             btnAgregar.TabIndex = 1;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click_1;
             // 
             // txtTalla
             // 
@@ -146,7 +151,7 @@
             // 
             // txtID
             // 
-            txtID.Location = new Point(143, 69);
+            txtID.Location = new Point(148, 69);
             txtID.Name = "txtID";
             txtID.Size = new Size(151, 30);
             txtID.TabIndex = 1;
@@ -161,6 +166,7 @@
             // cmbBusqueda
             // 
             cmbBusqueda.FormattingEnabled = true;
+            cmbBusqueda.Items.AddRange(new object[] { "Codigo", "Calzado" });
             cmbBusqueda.Location = new Point(148, 26);
             cmbBusqueda.Name = "cmbBusqueda";
             cmbBusqueda.Size = new Size(151, 33);
@@ -337,7 +343,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(789, 34);
+            label11.Location = new Point(833, 29);
             label11.Name = "label11";
             label11.Size = new Size(132, 25);
             label11.TabIndex = 4;
@@ -347,7 +353,7 @@
             // 
             lblFechaActual.AutoSize = true;
             lblFechaActual.BorderStyle = BorderStyle.Fixed3D;
-            lblFechaActual.Location = new Point(703, 32);
+            lblFechaActual.Location = new Point(742, 32);
             lblFechaActual.Name = "lblFechaActual";
             lblFechaActual.Size = new Size(2, 27);
             lblFechaActual.TabIndex = 3;
@@ -355,7 +361,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(589, 34);
+            label10.Location = new Point(590, 29);
             label10.Name = "label10";
             label10.Size = new Size(146, 25);
             label10.TabIndex = 2;

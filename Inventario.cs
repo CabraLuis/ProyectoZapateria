@@ -291,6 +291,12 @@ namespace ProyectoZapateria
             return a;
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            ZapateriaForm zapateria = new ZapateriaForm();
+            zapateria.Show();
+            this.Hide();
+        }
     }
 }
 

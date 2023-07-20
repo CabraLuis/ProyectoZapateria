@@ -52,6 +52,7 @@
             radActualizar = new RadioButton();
             radAgregar = new RadioButton();
             dtgDatosZapatos = new DataGridView();
+            btnRegresar = new Button();
             grpDatosZapato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatosZapatos).BeginInit();
             SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             grpDatosZapato.BackColor = Color.Black;
             grpDatosZapato.BackgroundImage = Properties.Resources.FondoTenis4;
+            grpDatosZapato.Controls.Add(btnRegresar);
             grpDatosZapato.Controls.Add(btnBuscar);
             grpDatosZapato.Controls.Add(btnAccion);
             grpDatosZapato.Controls.Add(cmbProveedores);
@@ -94,7 +96,7 @@
             // btnBuscar
             // 
             btnBuscar.ForeColor = Color.Black;
-            btnBuscar.Location = new Point(293, 390);
+            btnBuscar.Location = new Point(182, 391);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(94, 29);
             btnBuscar.TabIndex = 2;
@@ -104,7 +106,7 @@
             // 
             // btnAccion
             // 
-            btnAccion.Location = new Point(108, 390);
+            btnAccion.Location = new Point(9, 391);
             btnAccion.Name = "btnAccion";
             btnAccion.Size = new Size(115, 29);
             btnAccion.TabIndex = 1;
@@ -298,6 +300,16 @@
             dtgDatosZapatos.Size = new Size(1332, 415);
             dtgDatosZapatos.TabIndex = 1;
             // 
+            // btnRegresar
+            // 
+            btnRegresar.Location = new Point(337, 392);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(94, 29);
+            btnRegresar.TabIndex = 3;
+            btnRegresar.Text = "Regresar";
+            btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
+            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -341,5 +353,6 @@
         private Button btnAccion;
         private DataGridView dtgDatosZapatos;
         private Button btnBuscar;
+        private Button btnRegresar;
     }
 }

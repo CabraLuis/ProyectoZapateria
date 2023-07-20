@@ -15,13 +15,13 @@ namespace ProyectoZapateria
         string connectionString = "server=LAPTOP-I1BSF5OM\\SQLEXPRESS; database=Zapateria ; integrated security = true";// Data Source=server;Initial Catalog=database;User ID=username;Password=password;";
         string consulta = "";
         public string usuario;
-       
+
         public RegistroProveedor(string usuari)
         {
             InitializeComponent();
             usuario = usuari;
         }
-      
+
         private void btnInicio_Click(object sender, EventArgs e)
         {
             GenerarVenta Venta2 = new GenerarVenta(usuario);
@@ -68,7 +68,7 @@ namespace ProyectoZapateria
                 {
 
                 }
-            }       
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -106,6 +106,11 @@ namespace ProyectoZapateria
             GenerarVenta Venta2 = new GenerarVenta(usuario);
             Venta2.Show();
             this.Hide();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

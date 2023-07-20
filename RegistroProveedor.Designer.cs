@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             grpDatosProveedor = new GroupBox();
+            btnBuscar = new Button();
             btnSalir = new Button();
             btnInicio = new Button();
             btnAccion = new Button();
@@ -46,7 +47,6 @@
             dtgcNombre = new DataGridViewTextBoxColumn();
             dtgcTelefono = new DataGridViewTextBoxColumn();
             dtgcDireccion = new DataGridViewTextBoxColumn();
-            btnBuscar = new Button();
             grpDatosProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatosProveedores).BeginInit();
             SuspendLayout();
@@ -75,6 +75,16 @@
             grpDatosProveedor.TabIndex = 0;
             grpDatosProveedor.TabStop = false;
             grpDatosProveedor.Text = "Datos Proveedores:";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(333, 213);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(94, 29);
+            btnBuscar.TabIndex = 8;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnSalir
             // 
@@ -246,15 +256,6 @@
             dtgcDireccion.Name = "dtgcDireccion";
             dtgcDireccion.ReadOnly = true;
             dtgcDireccion.Width = 125;
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.Location = new Point(333, 213);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(94, 29);
-            btnBuscar.TabIndex = 8;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
             // 
             // RegistroProveedor
             // 
