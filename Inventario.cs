@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 //using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -37,7 +38,7 @@ namespace ProyectoZapateria
                 string color = txtColor.Text;
                 SqlMoney money = SqlMoney.Parse(txtPrecio.Text);
                 int stock = int.Parse(txtExistencias.Text);
-                int idprov = cmbProveedores.SelectedIndex + 1;
+                int idprov = cmbProveedores.SelectedIndex + 3;
                 if (HabilitarTextBox(grpDatosZapato) > 0)
                 {
                     MessageBox.Show("Favor de ingresar de rellenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -59,6 +60,7 @@ namespace ProyectoZapateria
                         command.ExecuteScalar();
                         MessageBox.Show("Se han agregado correctamente los datos", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatagrid();
+                        Limpiar(dtgDatosZapatos);
                         connection.Close();
                     }
                     if (radActualizar.Checked)
@@ -76,6 +78,7 @@ namespace ProyectoZapateria
                         command.ExecuteScalar();
                         MessageBox.Show("Se han agregado correctamente los datos", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatagrid();
+                        Limpiar(dtgDatosZapatos);
                         connection.Close();
                     }
                 }
@@ -290,12 +293,29 @@ namespace ProyectoZapateria
             }
             return a;
         }
+        public void Limpiar(Control container)
+        {
+            foreach (Control control in container.Controls)
+            {
+                if (control is TextBox)
+                {
 
+                    control.Text = default;
+
+                }
+
+            }
+        }
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            ZapateriaForm zapateria = new ZapateriaForm();
+            GenerarVenta zapateria = new GenerarVenta();
             zapateria.Show();
             this.Hide();
+        }
+
+        private void grpDatosZapato_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

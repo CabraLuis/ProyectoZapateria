@@ -51,8 +51,6 @@ namespace ProyectoZapateria
                     command2.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
                     command2.Parameters.AddWithValue("@Contraseña", contraseña);
 
-
-
                     object tipoUsuario = command.ExecuteScalar();
                     object sexo = command2.ExecuteScalar();
                     if (tipoUsuario != null)
@@ -65,7 +63,7 @@ namespace ProyectoZapateria
 
                             case "Administrador":
                                 // Lógica para el usuario administrador
-                                MessageBox.Show("Si entras perrio");
+                                MessageBox.Show("Bienvenido");
 
                                 GenerarVenta.Show();
                                 Limpiar();

@@ -24,7 +24,7 @@ namespace ProyectoZapateria
 
         }
         public GenerarVenta(string user) { InitializeComponent();  usuario = user; }
-
+        public GenerarVenta() { InitializeComponent(); }
         private void GenerarVenta_Load(object sender, EventArgs e)
         {
 
@@ -94,6 +94,12 @@ namespace ProyectoZapateria
             {
                 MessageBox.Show("No tienes los permisos necesarios para entrar al apartado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                RegistroProveedor proveedor = new RegistroProveedor(usuario);
+                proveedor.Show();
+                this.Hide();
+            }
            
         }
 
@@ -114,12 +120,18 @@ namespace ProyectoZapateria
             {
                 MessageBox.Show("No tienes los permisos necesarios para entrar al apartado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                Inventario inventario = new Inventario(usuario);
+                inventario.Show();
+                this.Hide();
+            }
             
         }
 
         private void GenerarVenta_Load_1(object sender, EventArgs e)
         {
-
+          
         }
     }
 }

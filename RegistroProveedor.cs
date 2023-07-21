@@ -40,11 +40,25 @@ namespace ProyectoZapateria
 
             try
             {
-
-
                 if (radActualizarProveedor.Checked)
                 {
-
+                    if (txtDireccion.Text == null || txtNombre.Text == null || txtTelefono.Text == null)
+                    {
+                        MessageBox.Show("Favor de llenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        consulta = $"Update[General].[Proveedor] Set Nombre = @Nomre,Telefono = @Telefono,Direccion=@Direccion";
+                        SqlCommand command = new SqlCommand(consulta, connection);
+                        command.Parameters.AddWithValue("@Nombre", Nombre);
+                        command.Parameters.AddWithValue("@Telefono", Telefono);
+                        command.Parameters.AddWithValue("@Direccion", Direccion);
+                        command.ExecuteScalar();
+                        connection.Close();
+                        MessageBox.Show("Se han guardado los datos correctamente");
+                        limpiar();
+                        CargarDatagrid();
+                    }
                 }
                 else if (radAgregarProveedor.Checked)
                 {
@@ -62,11 +76,29 @@ namespace ProyectoZapateria
                         command.ExecuteScalar();
                         connection.Close();
                         MessageBox.Show("Se han guardado los datos correctamente");
+                        limpiar();
+                        CargarDatagrid();
                     }
                 }
                 else if (radEliminarProveedor.Checked)
                 {
-
+                    if (txtDireccion.Text == null || txtNombre.Text == null || txtTelefono.Text == null)
+                    {
+                        MessageBox.Show("Favor de llenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        consulta = $"Delete [General].[Proveedor] where Nombre = Nombre";
+                        SqlCommand command = new SqlCommand(consulta, connection);
+                        command.Parameters.AddWithValue("@Nombre", Nombre);
+                        command.Parameters.AddWithValue("@Telefono", Telefono);
+                        command.Parameters.AddWithValue("@Direccion", Direccion);
+                        command.ExecuteScalar();
+                        connection.Close();
+                        MessageBox.Show("Se han guardado los datos correctamente");
+                        limpiar();
+                        CargarDatagrid();
+                    }
                 }
             }
             catch (Exception ex)
@@ -110,7 +142,94 @@ namespace ProyectoZapateria
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            // Obtener el valor ingresado en el TextBox de búsqueda
 
+
+            // Realizar la consulta utilizando el valor de búsqueda
+
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+                string valorBusqueda = txtNombre.Text;
+                string query = "Select Nombre,Direccion,Telefono from General.Proveedor";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ValorBusqueda", valorBusqueda);
+                    command.ExecuteScalar();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Si se encuentra el registro, llenar los controles con los datos obtenidos
+                            string id = reader["Nombre"].ToString();
+                            string Tipo = reader["Direccion"].ToString();
+                            int Talla = int.Parse(reader["Telefono"].ToString());
+
+                            txtNombre.Text = id;
+                            txtDireccion.Text = Tipo;
+                            txtTelefono.Text = Convert.ToString(Talla);
+                            CargarDatagrid();
+
+                        }
+                        else
+                        {
+                            // Si no se encuentra el registro, mostrar un mensaje o realizar alguna acción adicional
+                            MessageBox.Show("No se encontró el registro.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
+        public void CargarDatagrid()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string consultaSQL = "SELECT * from [General].[Proveedor]"; // Reemplaza con tu consulta SQL para obtener los nuevos datos
+
+
+                    using (SqlCommand comando = new SqlCommand(consultaSQL, connection))
+                    {
+                        try
+                        {
+                            connection.Open();
+                            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                            DataTable tablaDatos = new DataTable();
+                            adaptador.Fill(tablaDatos);
+                            dtgDatosProveedores.DataSource = tablaDatos; // Asigna la tabla como origen de datos para el DataGridView
+                        }
+                        catch (Exception ex)
+                        {
+                            // Manejo de excepciones (puedes mostrar un mensaje de error, por ejemplo)
+                            MessageBox.Show("Error al cargar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        public void limpiar()
+        {
+            txtDireccion.Text = default;
+            txtNombre.Text = default;
+            txtTelefono.Text = default;
+        }
+
     }
 }

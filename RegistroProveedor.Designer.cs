@@ -43,10 +43,6 @@
             radActualizarProveedor = new RadioButton();
             radAgregarProveedor = new RadioButton();
             dtgDatosProveedores = new DataGridView();
-            dtgcID = new DataGridViewTextBoxColumn();
-            dtgcNombre = new DataGridViewTextBoxColumn();
-            dtgcTelefono = new DataGridViewTextBoxColumn();
-            dtgcDireccion = new DataGridViewTextBoxColumn();
             grpDatosProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatosProveedores).BeginInit();
             SuspendLayout();
@@ -216,7 +212,6 @@
             dtgDatosProveedores.AllowUserToAddRows = false;
             dtgDatosProveedores.AllowUserToDeleteRows = false;
             dtgDatosProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgDatosProveedores.Columns.AddRange(new DataGridViewColumn[] { dtgcID, dtgcNombre, dtgcTelefono, dtgcDireccion });
             dtgDatosProveedores.Location = new Point(613, 12);
             dtgDatosProveedores.Name = "dtgDatosProveedores";
             dtgDatosProveedores.ReadOnly = true;
@@ -224,38 +219,6 @@
             dtgDatosProveedores.RowTemplate.Height = 29;
             dtgDatosProveedores.Size = new Size(566, 316);
             dtgDatosProveedores.TabIndex = 1;
-            // 
-            // dtgcID
-            // 
-            dtgcID.HeaderText = "IDProveedor";
-            dtgcID.MinimumWidth = 6;
-            dtgcID.Name = "dtgcID";
-            dtgcID.ReadOnly = true;
-            dtgcID.Width = 125;
-            // 
-            // dtgcNombre
-            // 
-            dtgcNombre.HeaderText = "Nombre";
-            dtgcNombre.MinimumWidth = 6;
-            dtgcNombre.Name = "dtgcNombre";
-            dtgcNombre.ReadOnly = true;
-            dtgcNombre.Width = 125;
-            // 
-            // dtgcTelefono
-            // 
-            dtgcTelefono.HeaderText = "Telefono";
-            dtgcTelefono.MinimumWidth = 6;
-            dtgcTelefono.Name = "dtgcTelefono";
-            dtgcTelefono.ReadOnly = true;
-            dtgcTelefono.Width = 125;
-            // 
-            // dtgcDireccion
-            // 
-            dtgcDireccion.HeaderText = "Direccion";
-            dtgcDireccion.MinimumWidth = 6;
-            dtgcDireccion.Name = "dtgcDireccion";
-            dtgcDireccion.ReadOnly = true;
-            dtgcDireccion.Width = 125;
             // 
             // RegistroProveedor
             // 
@@ -288,10 +251,6 @@
         private Label label2;
         private TextBox txtNombre;
         private DataGridView dtgDatosProveedores;
-        private DataGridViewTextBoxColumn dtgcID;
-        private DataGridViewTextBoxColumn dtgcNombre;
-        private DataGridViewTextBoxColumn dtgcTelefono;
-        private DataGridViewTextBoxColumn dtgcDireccion;
         private Button btnSalir;
         private Button btnInicio;
         private Button btnBuscar;

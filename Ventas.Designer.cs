@@ -31,8 +31,6 @@
             Label lblHoraActual;
             grpDatosCalzado = new GroupBox();
             btnEliminar = new Button();
-            btnBuscar = new Button();
-            btnModificar = new Button();
             btnAgregar = new Button();
             txtTalla = new TextBox();
             txtID = new TextBox();
@@ -42,6 +40,8 @@
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
+            btnModificar = new Button();
+            btnBuscar = new Button();
             grpDatosCliente = new GroupBox();
             txtDireccion = new TextBox();
             label8 = new Label();
@@ -81,8 +81,6 @@
             // 
             grpDatosCalzado.BackgroundImage = Properties.Resources.FondoTenis11;
             grpDatosCalzado.Controls.Add(btnEliminar);
-            grpDatosCalzado.Controls.Add(btnBuscar);
-            grpDatosCalzado.Controls.Add(btnModificar);
             grpDatosCalzado.Controls.Add(btnAgregar);
             grpDatosCalzado.Controls.Add(txtTalla);
             grpDatosCalzado.Controls.Add(txtID);
@@ -92,6 +90,8 @@
             grpDatosCalzado.Controls.Add(label4);
             grpDatosCalzado.Controls.Add(label2);
             grpDatosCalzado.Controls.Add(label1);
+            grpDatosCalzado.Controls.Add(btnModificar);
+            grpDatosCalzado.Controls.Add(btnBuscar);
             grpDatosCalzado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             grpDatosCalzado.Location = new Point(12, 12);
             grpDatosCalzado.Name = "grpDatosCalzado";
@@ -103,34 +103,13 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(7, 281);
+            btnEliminar.Location = new Point(6, 281);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(268, 29);
             btnEliminar.TabIndex = 2;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Visible = false;
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.Location = new Point(7, 246);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(268, 29);
-            btnBuscar.TabIndex = 1;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Visible = false;
-            btnBuscar.Click += btnBuscar_Click;
-            // 
-            // btnModificar
-            // 
-            btnModificar.Location = new Point(7, 176);
-            btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(268, 29);
-            btnModificar.TabIndex = 1;
-            btnModificar.Text = "Modificar";
-            btnModificar.UseVisualStyleBackColor = true;
-            btnModificar.Visible = false;
             // 
             // btnAgregar
             // 
@@ -171,6 +150,7 @@
             cmbBusqueda.Name = "cmbBusqueda";
             cmbBusqueda.Size = new Size(151, 33);
             cmbBusqueda.TabIndex = 1;
+            cmbBusqueda.Visible = false;
             // 
             // label3
             // 
@@ -211,6 +191,28 @@
             label1.Size = new Size(123, 25);
             label1.TabIndex = 1;
             label1.Text = "Buscar por:";
+            label1.Visible = false;
+            // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(6, 176);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(268, 29);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Visible = false;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(6, 246);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(268, 29);
+            btnBuscar.TabIndex = 1;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Visible = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // grpDatosCliente
             // 
@@ -319,6 +321,7 @@
             btnCancelarVenta.TabIndex = 3;
             btnCancelarVenta.Text = "Cancelar Venta";
             btnCancelarVenta.UseVisualStyleBackColor = false;
+            btnCancelarVenta.Click += btnCancelarVenta_Click;
             // 
             // grpEmpleado
             // 
@@ -348,6 +351,7 @@
             label11.Size = new Size(132, 25);
             label11.TabIndex = 4;
             label11.Text = "Hora Actual:";
+            label11.Visible = false;
             // 
             // lblFechaActual
             // 

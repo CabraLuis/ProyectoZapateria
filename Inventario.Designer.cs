@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             grpDatosZapato = new GroupBox();
+            btnRegresar = new Button();
             btnBuscar = new Button();
             btnAccion = new Button();
             cmbProveedores = new ComboBox();
@@ -52,7 +53,6 @@
             radActualizar = new RadioButton();
             radAgregar = new RadioButton();
             dtgDatosZapatos = new DataGridView();
-            btnRegresar = new Button();
             grpDatosZapato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgDatosZapatos).BeginInit();
             SuspendLayout();
@@ -92,6 +92,18 @@
             grpDatosZapato.TabIndex = 0;
             grpDatosZapato.TabStop = false;
             grpDatosZapato.Text = "Datos del producto:";
+            grpDatosZapato.Enter += grpDatosZapato_Enter;
+            // 
+            // btnRegresar
+            // 
+            btnRegresar.ForeColor = Color.MediumBlue;
+            btnRegresar.Location = new Point(337, 392);
+            btnRegresar.Name = "btnRegresar";
+            btnRegresar.Size = new Size(120, 29);
+            btnRegresar.TabIndex = 3;
+            btnRegresar.Text = "Regresar";
+            btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // btnBuscar
             // 
@@ -292,30 +304,20 @@
             dtgDatosZapatos.AllowUserToAddRows = false;
             dtgDatosZapatos.AllowUserToDeleteRows = false;
             dtgDatosZapatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgDatosZapatos.Location = new Point(464, 17);
+            dtgDatosZapatos.Location = new Point(473, 17);
             dtgDatosZapatos.Name = "dtgDatosZapatos";
             dtgDatosZapatos.ReadOnly = true;
             dtgDatosZapatos.RowHeadersWidth = 51;
             dtgDatosZapatos.RowTemplate.Height = 29;
-            dtgDatosZapatos.Size = new Size(1332, 415);
+            dtgDatosZapatos.Size = new Size(1221, 415);
             dtgDatosZapatos.TabIndex = 1;
-            // 
-            // btnRegresar
-            // 
-            btnRegresar.Location = new Point(337, 392);
-            btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(94, 29);
-            btnRegresar.TabIndex = 3;
-            btnRegresar.Text = "Regresar";
-            btnRegresar.UseVisualStyleBackColor = true;
-            btnRegresar.Click += btnRegresar_Click;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.FondoTenis4;
-            ClientSize = new Size(1808, 458);
+            ClientSize = new Size(1713, 458);
             Controls.Add(dtgDatosZapatos);
             Controls.Add(grpDatosZapato);
             Name = "Inventario";

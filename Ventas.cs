@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -22,7 +23,7 @@ namespace ProyectoZapateria
             this.usuario = usuari;
         }
         public string connectionString = "server=LAPTOP-I1BSF5OM\\SQLEXPRESS; database=Zapateria ; integrated security = true";
-        
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -36,13 +37,18 @@ namespace ProyectoZapateria
 
         private void btnRealizarVenta_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Se a realizado la venta correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Question);
+           GenerarVenta generarVenta = new GenerarVenta();
+            generarVenta.Show();
+            this.Hide();
         }
 
         private void Ventas_Load(object sender, EventArgs e)
         {
             ObtenerEmpleados();
             CargarDatagrid();
+            lblFechaActual.Text = (DateTime.Now).ToString();
+
         }
 
         public void ObtenerEmpleados()
@@ -135,6 +141,7 @@ namespace ProyectoZapateria
         {
             try
             {
+                // MessageBox.Show("Que rollo si entro");
                 string Nombre = txtNombreCliente.Text;
                 string Apellido = txtApellido.Text;
                 string Direccion = txtDireccion.Text;
@@ -142,17 +149,18 @@ namespace ProyectoZapateria
 
                 DateTime Fecha = DateTime.Now;
                 int idzapato = int.Parse(txtID.Text);
-                int idempleado = cmbEmpleados.SelectedIndex;
+                int idempleado = cmbEmpleados.SelectedIndex + 3;
                 int cantidad = int.Parse(txtCantidad.Text);
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
+                    MessageBox.Show("Sigo");
                     try
                     {
                         connection.Open();
-
+                        //MessageBox.Show("Otra vez");
                         // Agregar el cliente y obtener su ID
-                        string clienteQuery = "INSERT INTO [General].Cliente (Nombre, Apellido, Direccion, Telefono) VALUES (@Nombre, @Apellido, @Direccion, @Telefono); SELECT SCOPE_IDENTITY();";
+                        string clienteQuery = $"INSERT INTO [General].[Cliente] (Nombre, Apellido, Direccion, Telefono) VALUES (@Nombre, @Apellido, @Direccion, @Telefono); SELECT SCOPE_IDENTITY();";
                         SqlCommand clienteCommand = new SqlCommand(clienteQuery, connection);
                         clienteCommand.Parameters.AddWithValue("@Nombre", Nombre);
                         clienteCommand.Parameters.AddWithValue("@Apellido", Apellido);
@@ -161,7 +169,7 @@ namespace ProyectoZapateria
                         int idCliente = Convert.ToInt32(clienteCommand.ExecuteScalar());
 
                         // Obtener el precio del zapato
-                        string precioQuery = "SELECT Precio FROM General.Zapato WHERE ID_Zapato = @IDzapato";
+                        string precioQuery = "SELECT Precio FROM [General].Zapato WHERE ID_Zapato = @IDzapato";
                         SqlCommand precioCommand = new SqlCommand(precioQuery, connection);
                         precioCommand.Parameters.AddWithValue("@IDzapato", idzapato);
                         int precio = Convert.ToInt32(precioCommand.ExecuteScalar());
@@ -178,10 +186,13 @@ namespace ProyectoZapateria
                         command.Parameters.AddWithValue("@IDCliente", idCliente);
                         command.Parameters.AddWithValue("@IDZapato", idzapato);
                         command.Parameters.AddWithValue("@IDEmpleado", idempleado);
-
                         command.ExecuteNonQuery();
+                        //MessageBox.Show("SI terminar");
                         MessageBox.Show("Cliente y venta agregados correctamente.");
+                        connection.Close();
+                        CargarDatagrid();
                     }
+
                     // Crear una conexión y un adaptador para ejecutar la consulta y recuperar los datos.
                     //SqlConnection connection = new SqlConnection(connectionString);
                     //    try
@@ -241,6 +252,14 @@ namespace ProyectoZapateria
                 }
             }
             catch { }
-         }
-    } }
+        }
+
+        private void btnCancelarVenta_Click(object sender, EventArgs e)
+        {
+            GenerarVenta ef = new GenerarVenta();
+            ef.Show();
+            this.Hide();
+        }
+    }
+}
 
